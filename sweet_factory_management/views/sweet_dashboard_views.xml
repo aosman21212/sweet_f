@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_sweet_dashboard" model="ir.actions.client">
+        <field name="name">Sweet Factory Dashboard</field>
+        <field name="tag">sweet_factory_dashboard</field>
+    </record>
+
+</odoo>

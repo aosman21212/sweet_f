@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sequence_sweet_batch" model="ir.sequence">
+        <field name="name">Sweet Production Batch</field>
+        <field name="code">sweet.batch</field>
+        <field name="prefix">BATCH/%(year)s/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="sequence_sweet_quality_check" model="ir.sequence">
+        <field name="name">Sweet Quality Check</field>
+        <field name="code">sweet.quality.check</field>
+        <field name="prefix">QC/%(year)s/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

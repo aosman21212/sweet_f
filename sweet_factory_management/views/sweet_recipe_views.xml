@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Recipe Form View -->
+    <record id="view_sweet_recipe_form" model="ir.ui.view">
+        <field name="name">sweet.recipe.form</field>
+        <field name="model">sweet.recipe</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_approve" string="Approve" type="object"
+                            class="btn-primary"
+                            invisible="state != 'draft'"/>
+                    <button name="action_archive" string="Archive" type="object"
+                            invisible="state != 'approved'"/>
+                    <button name="action_reset_draft" string="Reset to Draft" type="object"
+                            invisible="state not in ['approved', 'archived']"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,approved,archived"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_batches" type="object" class="oe_stat_button"
+                                icon="fa-flask">
+                            <field name="batch_count" string="Batches" widget="statinfo"/>
+                        </button>
+                        <button type="object" name="action_view_batches" class="oe_stat_button"
+                                icon="fa-list-ul">
+                            <field name="ingredient_count" string="Ingredients" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Recipe Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="sweet_type"/>
+                            <field name="product_id"/>
+                        </group>
+                        <group>
+                            <field name="standard_batch_qty"/>
+                            <field name="yield_percentage"/>
+                            <field name="estimated_cost_per_kg" widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Ingredients" name="ingredients">
+                            <field name="ingredient_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="product_id"/>
+                                    <field name="ingredient_type"/>
+                                    <field name="quantity_per_batch"/>
+                                    <field name="product_uom_id" optional="show"/>
+                                    <field name="percentage" optional="show"/>
+                                    <field name="cost_per_unit" optional="show"/>
+                                    <field name="line_cost" optional="show"/>
+                                    <field name="is_key_ingredient" optional="show"/>
+                                    <field name="notes" optional="hide"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Process" name="process">
+                            <group>
+                                <group string="Cooking">
+                                    <field name="cooking_temp"/>
+                                    <field name="cooking_duration"/>
+                                    <field name="cooling_temp"/>
+                                </group>
+                                <group string="Storage &amp; Shelf Life">
+                                    <field name="storage_temp"/>
+                                    <field name="shelf_life_days"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Nutritional Info" name="nutritional">
+                            <group>
+                                <group string="Nutrition Facts">
+                                    <field name="calories_per_100g"/>
+                                    <field name="sugar_content"/>
+                                    <field name="fat_content"/>
+                                </group>
+                                <group string="Allergens">
+                                    <field name="contains_nuts"/>
+                                    <field name="contains_dairy"/>
+                                    <field name="contains_gluten"/>
+                                    <field name="contains_eggs"/>
+                                    <field name="contains_soy"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Quality Standards" name="quality">
+                            <field name="quality_parameter_ids" widget="many2many_tags"/>
+                        </page>
+                        <page string="Instructions" name="instructions">
+                            <field name="notes" widget="html"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Recipe List View -->
+    <record id="view_sweet_recipe_list" model="ir.ui.view">
+        <field name="name">sweet.recipe.list</field>
+        <field name="model">sweet.recipe</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state == 'approved'"
+                  decoration-muted="state == 'archived'">
+                <field name="name"/>
+                <field name="code" optional="show"/>
+                <field name="sweet_type"/>
+                <field name="standard_batch_qty"/>
+                <field name="yield_percentage"/>
+                <field name="estimated_cost_per_kg" optional="show"/>
+                <field name="ingredient_count" optional="show"/>
+                <field name="batch_count" optional="show"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'approved'"
+                       decoration-warning="state == 'draft'"
+                       decoration-muted="state == 'archived'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Recipe Search View -->
+    <record id="view_sweet_recipe_search" model="ir.ui.view">
+        <field name="name">sweet.recipe.search</field>
+        <field name="model">sweet.recipe</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="sweet_type"/>
+                <filter string="Draft" name="filter_draft" domain="[('state','=','draft')]"/>
+                <filter string="Approved" name="filter_approved" domain="[('state','=','approved')]"/>
+                <filter string="Archived" name="filter_archived" domain="[('state','=','archived')]"/>
+                <separator/>
+                <filter string="Contains Nuts" name="filter_nuts" domain="[('contains_nuts','=',True)]"/>
+                <filter string="Contains Dairy" name="filter_dairy" domain="[('contains_dairy','=',True)]"/>
+                <group>
+                    <filter string="Sweet Type" name="group_sweet_type" context="{'group_by': 'sweet_type'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Recipe Action -->
+    <record id="action_sweet_recipe" model="ir.actions.act_window">
+        <field name="name">Recipes</field>
+        <field name="res_model">sweet.recipe</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first sweet recipe!
+            </p>
+            <p>Define ingredients, process parameters, nutritional info and quality standards.</p>
+        </field>
+    </record>
+
+</odoo>

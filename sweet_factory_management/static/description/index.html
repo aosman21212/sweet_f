@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Sweet Factory Management | Confectionery ERP for Odoo 19</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        /* ── Hero ───────────────────────────── */
+        .hero {
+            background: linear-gradient(135deg, #714B67 0%, #4A2F47 100%);
+            color: white;
+            padding: 48px 40px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .hero img.icon { width: 80px; height: 80px; border-radius: 16px; background: rgba(255,255,255,0.15); padding: 8px; }
+        .hero h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+        .hero p  { font-size: 15px; opacity: 0.9; max-width: 600px; line-height: 1.6; }
+        .hero .badges { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+        .badge-pill {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ── Content wrapper ────────────────── */
+        .content { max-width: 960px; margin: 0 auto; padding: 40px 30px; }
+
+        /* ── Section headings ───────────────── */
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #714B67;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0e8ef;
+        }
+
+        /* ── Screenshot ─────────────────────── */
+        .screenshot-section { margin-bottom: 48px; }
+        .screenshot-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            border: 1px solid #e0d8e0;
+            display: block;
+        }
+        .screenshot-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* ── Feature grid ───────────────────── */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .feature-card {
+            background: #fdf8fc;
+            border: 1px solid #eedde8;
+            border-left: 4px solid #714B67;
+            border-radius: 8px;
+            padding: 18px 20px;
+        }
+        .feature-card h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #714B67;
+            margin-bottom: 6px;
+        }
+        .feature-card p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .feature-card .icon { font-size: 20px; margin-bottom: 8px; }
+
+        /* ── Steps ──────────────────────────── */
+        .steps { margin-bottom: 48px; }
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        .step-num {
+            background: #714B67;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .step-content h4 { font-size: 14px; font-weight: 700; color: #333; margin-bottom: 4px; }
+        .step-content p  { font-size: 13px; color: #666; line-height: 1.5; }
+
+        /* ── Modules table ──────────────────── */
+        table.models {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 48px;
+        }
+        table.models thead tr { background: #714B67; color: white; }
+        table.models th { padding: 10px 14px; text-align: left; font-weight: 600; }
+        table.models td { padding: 9px 14px; border-bottom: 1px solid #f0e8ef; color: #444; }
+        table.models tr:nth-child(even) td { background: #fdf8fc; }
+
+        /* ── Tip box ────────────────────────── */
+        .tip {
+            background: #fff8e1;
+            border-left: 4px solid #f9a825;
+            border-radius: 6px;
+            padding: 14px 18px;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .tip strong { color: #e65100; }
+
+        /* ── Footer ─────────────────────────── */
+        .footer {
+            background: #4A2F47;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 24px;
+            font-size: 12px;
+        }
+        .footer a { color: #d4a8cc; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO BANNER
+═══════════════════════════════════════════════════════ -->
+<div class="hero">
+    <img class="icon" src="icon.png" alt="Sweet Factory Management"/>
+    <div>
+        <h1>🍬 Sweet Factory Management</h1>
+        <p>Complete Confectionery &amp; Sweet Manufacturing ERP for Odoo 19. Manage recipes, production batches,
+           quality control, machines, ingredient costs, yield tracking, and expiry dates — all in one place.</p>
+        <div class="badges">
+            <span class="badge-pill">Odoo 19.0</span>
+            <span class="badge-pill">Arabic &amp; English</span>
+            <span class="badge-pill">Recipe Management</span>
+            <span class="badge-pill">Quality Control</span>
+            <span class="badge-pill">PDF Reports</span>
+            <span class="badge-pill">Demo Data Included</span>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- ═══════════════════════════════════════
+         SCREENSHOT
+    ═══════════════════════════════════════ -->
+    <div class="screenshot-section" style="margin-top:40px">
+        <h2>📸 Module Preview</h2>
+        <img src="screenshot.jpg" alt="Sweet Factory Management – Recipes, Batches, Quality Control &amp; Machines"/>
+        <p class="screenshot-caption">
+            Recipe list with cost per kg · Production batch with yield tracking · Quality check with sensory scoring · Machine maintenance log
+        </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         KEY FEATURES
+    ═══════════════════════════════════════ -->
+    <h2>🚀 Key Features</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📋</div>
+            <h3>Recipe / Formula Management</h3>
+            <p>Define complete product formulas with ingredients, proportions, allergen flags, nutritional info, and process parameters like cooking temperature and mixing time.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🏭</div>
+            <h3>Production Batch Tracking</h3>
+            <p>Full lifecycle management: Draft → Confirmed → In Production → Quality Check → Done. Assign shift, supervisor, and machine per batch with yield and cost tracking.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔬</div>
+            <h3>Multi-Stage Quality Control</h3>
+            <p>In-process, final, and packaging QC checks with configurable numeric parameters, pass/fail ranges, and sensory evaluation (taste, color, texture, aroma) scoring.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💰</div>
+            <h3>Ingredient Cost Tracking</h3>
+            <p>Real-time cost per kg based on actual ingredient consumption. Compare estimated vs actual costs and identify wastage across every production run.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚙️</div>
+            <h3>Machine &amp; Equipment Management</h3>
+            <p>Register factory machines with type, capacity, location, and status. Track usage logs, maintenance schedules, downtime, and total runtime hours automatically.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚠️</div>
+            <h3>Allergen &amp; Compliance Tracking</h3>
+            <p>Flag recipes containing nuts, dairy, gluten, eggs, or soy. Ensure product labeling compliance for MENA region food safety regulations.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h3>Yield &amp; Variance Analysis</h3>
+            <p>Track planned vs actual yield percentage with variance calculation per batch. Spot production inefficiencies and recipe inconsistencies at a glance.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📅</div>
+            <h3>Expiry Date &amp; Lot Traceability</h3>
+            <p>Auto-calculate expiry dates from production date and shelf life defined per recipe. Full lot traceability for every output product across all batches.</p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         HOW IT WORKS
+    ═══════════════════════════════════════ -->
+    <h2>📖 How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <h4>Set Up Recipes &amp; Configuration</h4>
+                <p>Create your product recipes with ingredients, quantities, and process parameters. Define quality parameters for each sweet type. Register your factory machines and configure quality check stages (in-process, final, packaging) in the Configuration menu.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <h4>Create &amp; Run Production Batches</h4>
+                <p>Create a batch linked to a recipe, set the planned batch size, assign a machine, shift, and supervisor, then click <strong>Confirm</strong> and <strong>Start Production</strong>. Record actual ingredient consumption as production proceeds and register finished output products with grades and lot numbers.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+                <h4>Quality Check &amp; Close Batch</h4>
+                <p>Once production is complete, move the batch to Quality Check state. Create a QC inspection, fill in parameter measurements and sensory scores — the system auto-calculates pass/fail per parameter. Approve, conditionally pass, or reject. Close the batch and print the full Batch Production PDF Report.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+                <h4>Monitor Machines &amp; Maintenance</h4>
+                <p>Log each machine usage session and maintenance event. Track total runtime hours, breakdown incidents, and upcoming maintenance dates. Set machine status (Available, Running, Maintenance, Breakdown) with a single click from the machine form.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         MODELS
+    ═══════════════════════════════════════ -->
+    <h2>🗂 Data Models</h2>
+    <table class="models">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Description</th>
+                <th>Key Fields</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>sweet.recipe</strong></td>
+                <td>Product Recipe / Formula</td>
+                <td>Sweet type, ingredients, yield %, allergens, shelf life, cost/kg</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.recipe.ingredient</strong></td>
+                <td>Ingredient Line per Recipe</td>
+                <td>Product, qty per batch, % of batch, unit cost</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.batch</strong></td>
+                <td>Production Batch (workflow)</td>
+                <td>Recipe, batch size, shift, supervisor, machine, state, actual yield</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.batch.ingredient.line</strong></td>
+                <td>Actual Ingredient Consumption</td>
+                <td>Product, planned qty, actual qty, variance, cost</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.batch.output.line</strong></td>
+                <td>Finished Product Output</td>
+                <td>Product, qty, grade, packaging type, lot number, expiry date</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.quality.parameter</strong></td>
+                <td>QC Parameter Definition</td>
+                <td>Category, type (numeric/boolean/text), min/max/target values</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.quality.check</strong></td>
+                <td>QC Inspection per Batch</td>
+                <td>Batch, stage, result, sensory scores (taste/color/texture/aroma)</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.machine</strong></td>
+                <td>Factory Equipment Registry</td>
+                <td>Machine type, status, capacity, location, maintenance dates</td>
+            </tr>
+            <tr>
+                <td><strong>sweet.machine.log</strong></td>
+                <td>Machine Usage &amp; Maintenance Log</td>
+                <td>Log type, duration, qty produced, issues found</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ═══════════════════════════════════════
+         TIP
+    ═══════════════════════════════════════ -->
+    <div class="tip">
+        💡 <strong>Demo data included!</strong> Install the module with demo data to instantly see
+        3 recipes (Chocolate Truffle, Orange Hard Candy, Strawberry Gummy Bears), 4 production batches,
+        4 machines, 8 quality parameters, 2 QC checks, and 3 machine logs — ready to explore without any manual setup.
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         ACCESS RIGHTS
+    ═══════════════════════════════════════ -->
+    <h2>🔐 Access Rights</h2>
+    <table class="models">
+        <thead>
+            <tr><th>Group</th><th>Permissions</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sweet Factory / User</strong></td>
+                <td>Read, create, and edit recipes, batches, ingredient lines, output products, quality checks, and machine logs. Read-only access to machines and quality parameters.</td>
+            </tr>
+            <tr>
+                <td><strong>Sweet Factory / Manager</strong></td>
+                <td>Full access including delete on all records. Manage quality parameters, approve recipes, configure machines, and access the Configuration menu and all PDF reports.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ═══════════════════════════════════════
+         TECHNICAL INFO
+    ═══════════════════════════════════════ -->
+    <h2>⚙️ Technical Information</h2>
+    <table class="models">
+        <thead>
+            <tr><th>Attribute</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Odoo Version</td><td>19.0</td></tr>
+            <tr><td>Module Version</td><td>19.0.1.0.0</td></tr>
+            <tr><td>License</td><td>LGPL-3</td></tr>
+            <tr><td>Author</td><td>LeapAI</td></tr>
+            <tr><td>Category</td><td>Manufacturing</td></tr>
+            <tr><td>Dependencies</td><td>mrp, stock, mail, account, purchase, sale_management, hr</td></tr>
+            <tr><td>Languages</td><td>English, Arabic (ar)</td></tr>
+            <tr><td>Demo Data</td><td>Yes — 3 recipes, 4 batches, 4 machines, 8 QC parameters, 2 quality checks</td></tr>
+            <tr><td>PDF Reports</td><td>QWeb PDF — Batch Production Report</td></tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════ -->
+<div class="footer">
+    Developed by <strong style="color:white">LeapAI</strong> ·
+    <a href="https://www.leapai.ai">www.leapai.ai</a> ·
+    Odoo 19.0 · Version 19.0.1.0.0 · License LGPL-3
+</div>
+
+</body>
+</html>

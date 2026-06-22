@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="sweet_factory_management.Dashboard">
+    <div class="sweet-dashboard o_action">
+
+        <!-- ── Loading spinner ────────────────────────── -->
+        <t t-if="state.loading">
+            <div class="sweet-db-loading">
+                <div class="spinner-border text-primary" role="status"/>
+                <p>Loading dashboard...</p>
+            </div>
+        </t>
+
+        <!-- ── Main content ───────────────────────────── -->
+        <t t-if="!state.loading and state.stats">
+
+            <!-- Header -->
+            <div class="sweet-db-header">
+                <div class="sweet-db-title">
+                    <span class="sweet-db-icon">🍬</span>
+                    <div>
+                        <h4>Sweet Factory Dashboard</h4>
+                        <p>Real-time overview of production, quality &amp; equipment</p>
+                    </div>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary" t-on-click="_loadData">
+                    ↻ Refresh
+                </button>
+            </div>
+
+            <!-- ── KPI Cards ──────────────────────────── -->
+            <div class="sweet-kpi-row">
+
+                <div class="sweet-kpi-card c-purple"
+                     t-on-click="() => this.openRecipes()">
+                    <div class="kpi-icon">📋</div>
+                    <div class="kpi-value"><t t-esc="state.stats.total_recipes"/></div>
+                    <div class="kpi-label">Total Recipes</div>
+                    <div class="kpi-sub"><t t-esc="state.stats.active_recipes"/> approved</div>
+                </div>
+
+                <div class="sweet-kpi-card c-blue"
+                     t-on-click="() => this.openBatches([['state','=','in_progress']])">
+                    <div class="kpi-icon">🏭</div>
+                    <div class="kpi-value"><t t-esc="state.stats.batches_in_progress"/></div>
+                    <div class="kpi-label">In Production</div>
+                    <div class="kpi-sub"><t t-esc="state.stats.batches_this_month"/> this month</div>
+                </div>
+
+                <div class="sweet-kpi-card c-green"
+                     t-on-click="() => this.openBatches([['state','=','done']])">
+                    <div class="kpi-icon">✅</div>
+                    <div class="kpi-value"><t t-esc="state.stats.batches_done"/></div>
+                    <div class="kpi-label">Batches Done</div>
+                    <div class="kpi-sub"><t t-esc="state.stats.batches_quality_check"/> in QC</div>
+                </div>
+
+                <div class="sweet-kpi-card c-yellow">
+                    <div class="kpi-icon">📊</div>
+                    <div class="kpi-value"><t t-esc="state.stats.avg_yield"/>%</div>
+                    <div class="kpi-label">Avg Yield Rate</div>
+                    <div class="kpi-sub">completed batches</div>
+                </div>
+
+                <div class="sweet-kpi-card c-teal"
+                     t-on-click="() => this.openQC([['result','=','pass']])">
+                    <div class="kpi-icon">🔬</div>
+                    <div class="kpi-value"><t t-esc="state.stats.qc_passed"/></div>
+                    <div class="kpi-label">QC Passed</div>
+                    <div class="kpi-sub"><t t-esc="state.stats.qc_pending"/> pending</div>
+                </div>
+
+                <div class="sweet-kpi-card c-indigo"
+                     t-on-click="() => this.openMachines([['state','=','running']])">
+                    <div class="kpi-icon">⚙️</div>
+                    <div class="kpi-value"><t t-esc="state.stats.machines_running"/></div>
+                    <div class="kpi-label">Machines Running</div>
+                    <div class="kpi-sub"><t t-esc="state.stats.machines_available"/> available</div>
+                </div>
+
+            </div>
+
+            <!-- ── Status Panels Row ──────────────────── -->
+            <div class="sweet-panels-row">
+
+                <!-- Batch Status -->
+                <div class="sweet-panel">
+                    <div class="panel-title">🏭 Batch Status</div>
+                    <div class="status-list">
+                        <div class="status-row" t-on-click="() => this.openBatches([['state','=','draft']])">
+                            <span class="dot dot-gray"/><span class="sname">Draft</span>
+                            <span class="scount"><t t-esc="state.stats.batches_draft"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openBatches([['state','=','confirmed']])">
+                            <span class="dot dot-blue-light"/><span class="sname">Confirmed</span>
+                            <span class="scount"><t t-esc="state.stats.batches_confirmed"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openBatches([['state','=','in_progress']])">
+                            <span class="dot dot-blue"/><span class="sname">In Production</span>
+                            <span class="scount text-primary fw-bold"><t t-esc="state.stats.batches_in_progress"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openBatches([['state','=','quality_check']])">
+                            <span class="dot dot-yellow"/><span class="sname">Quality Check</span>
+                            <span class="scount text-warning fw-bold"><t t-esc="state.stats.batches_quality_check"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openBatches([['state','=','done']])">
+                            <span class="dot dot-green"/><span class="sname">Done</span>
+                            <span class="scount text-success fw-bold"><t t-esc="state.stats.batches_done"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openBatches([['state','in',['failed','cancelled']]])">
+                            <span class="dot dot-red"/><span class="sname">Failed / Cancelled</span>
+                            <span class="scount text-danger"><t t-esc="state.stats.batches_failed"/></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QC Results -->
+                <div class="sweet-panel">
+                    <div class="panel-title">🔬 Quality Control</div>
+                    <div class="status-list">
+                        <div class="status-row" t-on-click="() => this.openQC([['result','=','pass']])">
+                            <span class="dot dot-green"/><span class="sname">Passed</span>
+                            <span class="scount text-success fw-bold"><t t-esc="state.stats.qc_passed"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openQC([['result','=','conditional']])">
+                            <span class="dot dot-yellow"/><span class="sname">Conditional Pass</span>
+                            <span class="scount text-warning fw-bold"><t t-esc="state.stats.qc_conditional"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openQC([['result','=','fail']])">
+                            <span class="dot dot-red"/><span class="sname">Failed</span>
+                            <span class="scount text-danger fw-bold"><t t-esc="state.stats.qc_failed"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openQC([['result','=','pending']])">
+                            <span class="dot dot-gray"/><span class="sname">Pending</span>
+                            <span class="scount text-muted"><t t-esc="state.stats.qc_pending"/></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Status -->
+                <div class="sweet-panel">
+                    <div class="panel-title">⚙️ Equipment Status</div>
+                    <div class="status-list">
+                        <div class="status-row" t-on-click="() => this.openMachines([['state','=','available']])">
+                            <span class="dot dot-green"/><span class="sname">Available</span>
+                            <span class="scount text-success fw-bold"><t t-esc="state.stats.machines_available"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openMachines([['state','=','running']])">
+                            <span class="dot dot-blue"/><span class="sname">Running</span>
+                            <span class="scount text-primary fw-bold"><t t-esc="state.stats.machines_running"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openMachines([['state','=','maintenance']])">
+                            <span class="dot dot-yellow"/><span class="sname">Maintenance</span>
+                            <span class="scount text-warning fw-bold"><t t-esc="state.stats.machines_maintenance"/></span>
+                        </div>
+                        <div class="status-row" t-on-click="() => this.openMachines([['state','=','breakdown']])">
+                            <span class="dot dot-red"/><span class="sname">Breakdown</span>
+                            <span class="scount text-danger fw-bold"><t t-esc="state.stats.machines_breakdown"/></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ── Recent Batches Table ───────────────── -->
+            <div class="sweet-table-card">
+                <div class="panel-title">🕐 Recent Production Batches</div>
+                <table class="sweet-table">
+                    <thead>
+                        <tr>
+                            <th>Batch #</th>
+                            <th>Recipe</th>
+                            <th>Planned Date</th>
+                            <th>Yield %</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="state.stats.recent_batches" t-as="b" t-key="b.id">
+                            <tr class="sweet-table-row" t-on-click="() => this.openBatch(b.id)">
+                                <td><strong><t t-esc="b.name"/></strong></td>
+                                <td><t t-esc="b.recipe"/></td>
+                                <td><t t-esc="b.planned_date"/></td>
+                                <td>
+                                    <span t-attf-class="yield-badge #{b.yield_pct >= 90 ? 'yield-good' : b.yield_pct >= 70 ? 'yield-ok' : 'yield-low'}">
+                                        <t t-esc="b.yield_pct"/>%
+                                    </span>
+                                </td>
+                                <td>
+                                    <span t-attf-class="state-badge state-#{b.state}">
+                                        <t t-esc="stateLabel(b.state)"/>
+                                    </span>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-if="!state.stats.recent_batches.length">
+                            <tr>
+                                <td colspan="5" class="text-center text-muted py-4">
+                                    No batches yet. <a t-on-click="() => this.openBatches()">Create one →</a>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+
+        </t>
+    </div>
+</t>
+
+</templates>

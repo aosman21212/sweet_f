@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Main Application Menu -->
+    <menuitem id="menu_sweet_factory_root"
+              name="Sweet Factory"
+              sequence="95"
+              web_icon="sweet_factory_management,static/description/icon.png"/>
+
+    <!-- Dashboard / Overview -->
+    <menuitem id="menu_sweet_factory_dashboard"
+              name="Dashboard"
+              parent="menu_sweet_factory_root"
+              action="action_sweet_dashboard"
+              sequence="10"/>
+
+    <!-- Recipes -->
+    <menuitem id="menu_sweet_recipe"
+              name="Recipes"
+              parent="menu_sweet_factory_root"
+              action="action_sweet_recipe"
+              sequence="20"/>
+
+    <!-- Production Section -->
+    <menuitem id="menu_sweet_production"
+              name="Production"
+              parent="menu_sweet_factory_root"
+              sequence="30"/>
+
+    <menuitem id="menu_sweet_batch"
+              name="Production Batches"
+              parent="menu_sweet_production"
+              action="action_sweet_batch"
+              sequence="10"/>
+
+    <menuitem id="menu_sweet_quality"
+              name="Quality Checks"
+              parent="menu_sweet_production"
+              action="action_sweet_quality_check"
+              sequence="20"/>
+
+    <!-- Equipment Section -->
+    <menuitem id="menu_sweet_equipment"
+              name="Equipment"
+              parent="menu_sweet_factory_root"
+              sequence="40"/>
+
+    <menuitem id="menu_sweet_machine"
+              name="Machines"
+              parent="menu_sweet_equipment"
+              action="action_sweet_machine"
+              sequence="10"/>
+
+    <menuitem id="menu_sweet_machine_log"
+              name="Machine Logs"
+              parent="menu_sweet_equipment"
+              action="action_sweet_machine_log"
+              sequence="20"/>
+
+    <!-- Configuration Section (Manager only) -->
+    <menuitem id="menu_sweet_config"
+              name="Configuration"
+              parent="menu_sweet_factory_root"
+              sequence="100"
+              groups="sweet_factory_management.group_sweet_factory_manager"/>
+
+    <menuitem id="menu_sweet_quality_parameter"
+              name="Quality Parameters"
+              parent="menu_sweet_config"
+              action="action_sweet_quality_parameter"
+              sequence="10"
+              groups="sweet_factory_management.group_sweet_factory_manager"/>
+
+</odoo>

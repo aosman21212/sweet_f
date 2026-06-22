@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Machine Form View -->
+    <record id="view_sweet_machine_form" model="ir.ui.view">
+        <field name="name">sweet.machine.form</field>
+        <field name="model">sweet.machine</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start_maintenance" string="Start Maintenance" type="object"
+                            class="btn-warning"
+                            invisible="state not in ['available', 'running']"/>
+                    <button name="action_set_available" string="Set Available" type="object"
+                            class="btn-success"
+                            invisible="state not in ['maintenance', 'breakdown', 'repair']"/>
+                    <button name="action_report_breakdown" string="Report Breakdown" type="object"
+                            class="btn-danger"
+                            invisible="state in ['breakdown', 'retired']"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="available,running,maintenance,breakdown,retired"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_logs" type="object"
+                                class="oe_stat_button" icon="fa-list-alt">
+                            <field name="log_count" string="Logs" widget="statinfo"/>
+                        </button>
+                        <div class="oe_stat_button" icon="fa-clock-o">
+                            <field name="total_runtime_hours" string="Runtime hrs" widget="statinfo"/>
+                        </div>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Machine Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="machine_type"/>
+                            <field name="location"/>
+                            <field name="capacity_per_hour"/>
+                        </group>
+                        <group>
+                            <field name="manufacturer"/>
+                            <field name="model_number"/>
+                            <field name="serial_number"/>
+                            <field name="purchase_date"/>
+                        </group>
+                    </group>
+                    <group string="Maintenance Schedule">
+                        <group>
+                            <field name="last_maintenance_date"/>
+                            <field name="next_maintenance_date"/>
+                            <field name="maintenance_interval_days"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Usage Logs" name="logs">
+                            <field name="log_ids" widget="one2many">
+                                <list>
+                                    <field name="log_date"/>
+                                    <field name="log_type"/>
+                                    <field name="batch_id" optional="show"/>
+                                    <field name="duration_hours"/>
+                                    <field name="qty_produced" optional="show"/>
+                                    <field name="performed_by" optional="show"/>
+                                    <field name="description" optional="show"/>
+                                    <field name="issue_found" optional="hide"/>
+                                    <field name="action_taken" optional="hide"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Machine List View -->
+    <record id="view_sweet_machine_list" model="ir.ui.view">
+        <field name="name">sweet.machine.list</field>
+        <field name="model">sweet.machine</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state == 'available'"
+                  decoration-info="state == 'running'"
+                  decoration-warning="state == 'maintenance'"
+                  decoration-danger="state in ['breakdown']"
+                  decoration-muted="state == 'retired'">
+                <field name="name"/>
+                <field name="code" optional="show"/>
+                <field name="machine_type"/>
+                <field name="location" optional="show"/>
+                <field name="capacity_per_hour"/>
+                <field name="last_maintenance_date" optional="show"/>
+                <field name="next_maintenance_date" optional="show"/>
+                <field name="total_runtime_hours" optional="show"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'available'"
+                       decoration-info="state == 'running'"
+                       decoration-warning="state == 'maintenance'"
+                       decoration-danger="state == 'breakdown'"
+                       decoration-muted="state == 'retired'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Machine Search View -->
+    <record id="view_sweet_machine_search" model="ir.ui.view">
+        <field name="name">sweet.machine.search</field>
+        <field name="model">sweet.machine</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="machine_type"/>
+                <filter string="Available" name="filter_available" domain="[('state','=','available')]"/>
+                <filter string="Running" name="filter_running" domain="[('state','=','running')]"/>
+                <filter string="Maintenance" name="filter_maintenance" domain="[('state','=','maintenance')]"/>
+                <filter string="Breakdown" name="filter_breakdown" domain="[('state','=','breakdown')]"/>
+                <group>
+                    <filter string="Machine Type" name="group_type" context="{'group_by': 'machine_type'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Machine Action -->
+    <record id="action_sweet_machine" model="ir.actions.act_window">
+        <field name="name">Machines</field>
+        <field name="res_model">sweet.machine</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Register your factory machines!
+            </p>
+            <p>Track machine status, maintenance schedules and production logs.</p>
+        </field>
+    </record>
+
+    <!-- Machine Log Form View -->
+    <record id="view_sweet_machine_log_form" model="ir.ui.view">
+        <field name="name">sweet.machine.log.form</field>
+        <field name="model">sweet.machine.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="machine_id"/>
+                            <field name="log_type"/>
+                            <field name="batch_id"/>
+                            <field name="performed_by"/>
+                        </group>
+                        <group>
+                            <field name="log_date"/>
+                            <field name="end_date"/>
+                            <field name="duration_hours" readonly="1"/>
+                            <field name="qty_produced"/>
+                            <field name="downtime_minutes"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="issue_found"/>
+                        <field name="action_taken"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Machine Log List View -->
+    <record id="view_sweet_machine_log_list" model="ir.ui.view">
+        <field name="name">sweet.machine.log.list</field>
+        <field name="model">sweet.machine.log</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="log_date"/>
+                <field name="machine_id"/>
+                <field name="log_type" widget="badge"
+                       decoration-info="log_type == 'production'"
+                       decoration-warning="log_type == 'maintenance'"
+                       decoration-danger="log_type in ['breakdown', 'repair']"/>
+                <field name="batch_id" optional="show"/>
+                <field name="duration_hours"/>
+                <field name="qty_produced" optional="show"/>
+                <field name="performed_by" optional="show"/>
+                <field name="description" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Machine Log Search View -->
+    <record id="view_sweet_machine_log_search" model="ir.ui.view">
+        <field name="name">sweet.machine.log.search</field>
+        <field name="model">sweet.machine.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="machine_id"/>
+                <field name="batch_id"/>
+                <field name="performed_by"/>
+                <filter string="Production" name="filter_production" domain="[('log_type','=','production')]"/>
+                <filter string="Maintenance" name="filter_maintenance" domain="[('log_type','=','maintenance')]"/>
+                <filter string="Breakdown" name="filter_breakdown" domain="[('log_type','=','breakdown')]"/>
+                <group>
+                    <filter string="Machine" name="group_machine" context="{'group_by': 'machine_id'}"/>
+                    <filter string="Type" name="group_type" context="{'group_by': 'log_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Machine Log Action -->
+    <record id="action_sweet_machine_log" model="ir.actions.act_window">
+        <field name="name">Machine Logs</field>
+        <field name="res_model">sweet.machine.log</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No machine logs yet.
+            </p>
+        </field>
+    </record>
+
+</odoo>

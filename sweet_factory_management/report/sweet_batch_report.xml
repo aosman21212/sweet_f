@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_sweet_batch" model="ir.actions.report">
+        <field name="name">Batch Production Report</field>
+        <field name="model">sweet.batch</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sweet_factory_management.report_sweet_batch_template</field>
+        <field name="report_file">sweet_factory_management.report_sweet_batch_template</field>
+        <field name="binding_model_id" ref="sweet_factory_management.model_sweet_batch"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
+</odoo>

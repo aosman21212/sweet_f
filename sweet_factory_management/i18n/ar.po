@@ -1,0 +1,2777 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sweet_factory_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-22 08:26+0000\n"
+"PO-Revision-Date: 2026-06-22 08:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__batch_count
+msgid "# Batches"
+msgstr "عدد الدفعات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__ingredient_count
+msgid "# Ingredients"
+msgstr "عدد المكونات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__percentage
+msgid "% of Batch"
+msgstr "٪ من الدفعة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid ""
+"/10 |\n"
+"                                                        Aroma:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid ""
+"/10 |\n"
+"                                                        Color:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid ""
+"/10 |\n"
+"                                                        Texture:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<small>Name &amp; Signature</small>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "<span class=\"o_stat_text\">Create QC Check</span>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<span style=\"color: green;\">PASS</span>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<span style=\"color: red;\">FAIL</span>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Actual Yield %</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Actual Yield (kg)</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Batch Number</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Corrective Action:</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Date Printed:</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>End Date</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Expiry Date</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Factory Manager</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Lot / Batch No.</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Planned Date</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Planned Qty (kg)</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Primary Machine</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Production Date</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>QC Inspector</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Recipe</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Remarks:</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid ""
+"<strong>Sensory Scores:</strong>\n"
+"                                                        Taste:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Shift</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Start Date</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Status:</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Supervisor</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Sweet Type</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "<strong>Yield Variance (kg)</strong>"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_form
+msgid "Acceptable Range"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__acid
+msgid "Acid"
+msgstr "حمض"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__acid
+msgid "Acid (Citric, Tartaric)"
+msgstr "حمض (ليموني، طرطري)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_needaction
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_needaction
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_needaction
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__action_taken
+msgid "Action Taken"
+msgstr "الإجراء المتخذ"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__active
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__active
+msgid "Active"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_exception_decoration
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_exception_decoration
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_exception_decoration
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_type_icon
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_type_icon
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_type_icon
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Actual"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Actual (kg)"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__actual_cooking_temp
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__actual_cooking_temp
+msgid "Actual Cooking Temp (°C)"
+msgstr "درجة حرارة الطهي الفعلية (°م)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__actual_cooling_temp
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__actual_cooling_temp
+msgid "Actual Cooling Temp (°C)"
+msgstr "درجة حرارة التبريد الفعلية (°م)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__actual_duration
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__actual_duration
+msgid "Actual Duration (min)"
+msgstr "المدة الفعلية (دقيقة)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__actual_qty
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__actual_qty
+msgid "Actual Qty"
+msgstr "الكمية الفعلية"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Actual Readings"
+msgstr "القراءات الفعلية"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__yield_percentage_actual
+msgid "Actual Yield %"
+msgstr "نسبة الإنتاجية الفعلية %"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__actual_yield
+msgid "Actual Yield (kg)"
+msgstr "الإنتاج الفعلي (كجم)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__shift__afternoon
+msgid "Afternoon (14:00 - 22:00)"
+msgstr "مسائية (14:00 - 22:00)"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Allergens"
+msgstr "مسببات الحساسية"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Approve"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__state__approved
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Approved"
+msgstr "معتمدة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Archive"
+msgstr "أرشفة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__state__archived
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Archived"
+msgstr "مؤرشفة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__aroma_score
+msgid "Aroma Score (1-10)"
+msgstr "تقييم الرائحة (1-10)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_attachment_count
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_attachment_count
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_attachment_count
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__state__available
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_search
+msgid "Available"
+msgstr "متاحة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Avg Yield Rate"
+msgstr "متوسط معدل الإنتاج"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "BATCH INFORMATION"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__bag
+msgid "Bag / Pouch"
+msgstr "كيس / حقيبة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__batch_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__batch_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__batch_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__batch_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Batch"
+msgstr "الدفعة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Batch #"
+msgstr "رقم الدفعة"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_batch_close_wizard
+msgid "Batch Completion Wizard"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_batch_ingredient_line
+msgid "Batch Ingredient Consumption Line"
+msgstr "سطر استهلاك مكونات الدفعة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__name
+msgid "Batch Number"
+msgstr "رقم الدفعة"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_batch_output_line
+msgid "Batch Output / Finished Product Line"
+msgstr "سطر مخرجات الدفعة / المنتج النهائي"
+
+#. module: sweet_factory_management
+#: model:ir.actions.report,name:sweet_factory_management.action_report_sweet_batch
+msgid "Batch Production Report"
+msgstr "تقرير دفعة الإنتاج"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/wizard/sweet_batch_close_wizard.py:0
+msgid "Batch completed via wizard. Yield: %.2f kg. QC: %s"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Batch completed. Total yield: %.2f kg"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Batch confirmed for production."
+msgstr "تم تأكيد الدفعة للإنتاج."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Batch marked as failed/scrapped."
+msgstr "تم تحديد الدفعة كفاشلة / خردة."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Batch moved to quality check stage."
+msgstr "تم نقل الدفعة إلى مرحلة فحص الجودة."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Batch must be in production to move to quality check."
+msgstr "يجب أن تكون الدفعة في مرحلة الإنتاج للانتقال إلى فحص الجودة."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Batch must be in quality check or in production to be marked as done."
+msgstr "يجب أن تكون الدفعة في فحص الجودة أو الإنتاج لتحديدها كمكتملة."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__lot_id
+msgid "Batch/Lot Number"
+msgstr "رقم الدفعة / الوجبة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Batches"
+msgstr "الدفعات"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Batches Done"
+msgstr "دفعات مكتملة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__box
+msgid "Box"
+msgstr "صندوق"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__state__breakdown
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine_log__log_type__breakdown
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_log_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_search
+msgid "Breakdown"
+msgstr "عطل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__bulk
+msgid "Bulk (kg)"
+msgstr "سائب (كجم)"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_butter_product_template
+msgid "Butter"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__calories_per_100g
+msgid "Calories per 100g"
+msgstr "السعرات الحرارية لكل 100 جم"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__cancelled
+msgid "Cancelled"
+msgstr "ملغاة"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_quality_check.py:0
+msgid "Cannot pass: some parameters have failed results."
+msgstr "لا يمكن النجاح: بعض المعاملات لها نتائج فاشلة."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__capacity_per_hour
+msgid "Capacity (kg/hour)"
+msgstr "الطاقة الإنتاجية (كجم/ساعة)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__caramel
+msgid "Caramel"
+msgstr "كراميل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__category
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__category
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+msgid "Category"
+msgstr "الفئة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__check_date
+msgid "Check Date"
+msgstr "تاريخ الفحص"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__check_stage
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Check Stage"
+msgstr "مرحلة الفحص"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__category__chemical
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+msgid "Chemical"
+msgstr "كيميائي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__chocolate
+msgid "Chocolate"
+msgstr "شوكولاتة"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_choc_toffee_product_template
+msgid "Chocolate Toffee"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__chocolate
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__chocolate
+msgid "Chocolate/Cocoa"
+msgstr "شوكولاتة / كاكاو"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_citric_acid_product_template
+msgid "Citric Acid"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine_log__log_type__cleaning
+msgid "Cleaning / Sanitation"
+msgstr "تنظيف / تعقيم"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__coating
+msgid "Coating / Enrobing"
+msgstr "طلاء / تغطية"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_cocoa_product_template
+msgid "Cocoa Powder"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__color
+msgid "Color Defect"
+msgstr "عيب في اللون"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__color_score
+msgid "Color Score (1-10)"
+msgstr "تقييم اللون (1-10)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__color
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__color
+msgid "Color/Dye"
+msgstr "لون / صباغ"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__company_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__company_id
+msgid "Company"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Completed batches cannot be cancelled."
+msgstr "لا يمكن إلغاء الدفعات المكتملة."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Completed batches cannot be failed."
+msgstr "لا يمكن إخفاق الدفعات المكتملة."
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Conditional"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_close_wizard__quality_result__conditional
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__result__conditional
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Conditional Pass"
+msgstr "قبول مشروط"
+
+#. module: sweet_factory_management
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_config
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__confirmed
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Confirmed"
+msgstr "مؤكدة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__contains_dairy
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Contains Dairy"
+msgstr "يحتوي على منتجات الألبان"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__contains_eggs
+msgid "Contains Eggs"
+msgstr "يحتوي على بيض"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__contains_gluten
+msgid "Contains Gluten"
+msgstr "يحتوي على غلوتين"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__contains_nuts
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Contains Nuts"
+msgstr "يحتوي على مكسرات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__contains_soy
+msgid "Contains Soy"
+msgstr "يحتوي على صويا"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__contamination
+msgid "Contamination"
+msgstr "تلوث"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__conveyor
+msgid "Conveyor Belt"
+msgstr "سير ناقل"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Cooking"
+msgstr "الطهي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__cooking_duration
+msgid "Cooking Duration (min)"
+msgstr "مدة الطهي (دقيقة)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__cooking_temp
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Cooking Temperature (°C)"
+msgstr "درجة حرارة الطهي (°م)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__cooling_temp
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Cooling Temperature (°C)"
+msgstr "درجة حرارة التبريد (°م)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__cooling
+msgid "Cooling Tunnel / Belt"
+msgstr "نفق التبريد / حزام التبريد"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__corrective_action
+msgid "Corrective Action"
+msgstr "الإجراء التصحيحي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__line_cost
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Cost Summary"
+msgstr "ملخص التكاليف"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__cost_per_kg
+msgid "Cost per kg"
+msgstr "التكلفة لكل كجم"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Cost per kg:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__cost_per_unit
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__cost_per_unit
+msgid "Cost/Unit"
+msgstr "التكلفة/الوحدة"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_cream_product_template
+msgid "Cream"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Create one →"
+msgstr "إنشاء واحدة ←"
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_quality_check
+msgid ""
+"Create quality checks from a production batch to inspect parameters and "
+"record results."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_batch
+msgid "Create your first production batch!"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_recipe
+msgid "Create your first sweet recipe!"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__create_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__create_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__currency_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__dairy
+msgid "Dairy"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__dairy
+msgid "Dairy (Milk, Cream)"
+msgstr "ألبان (حليب، قشدة)"
+
+#. module: sweet_factory_management
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_factory_dashboard
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__log_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch_ingredient_line__product_uom_id
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch_output_line__product_uom_id
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe_ingredient__product_uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__defect_qty
+msgid "Defect Qty (kg)"
+msgstr "كمية العيوب (كجم)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__defect_type
+msgid "Defect Type"
+msgstr "نوع العيب"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Defects"
+msgstr "العيوب"
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_recipe
+msgid ""
+"Define ingredients, process parameters, nutritional info and quality "
+"standards."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_quality_parameter
+msgid "Define quality parameters for your products!"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__depositor
+msgid "Depositor / Moulding"
+msgstr "آلة الصب / التشكيل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__description
+msgid "Description / Method"
+msgstr "الوصف / الطريقة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_form
+msgid "Description / Test Method"
+msgstr "الوصف / طريقة الاختبار"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__display_box
+msgid "Display Box"
+msgstr "صندوق عرض"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_dashboard__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__display_name
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__done
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Done"
+msgstr "مكتملة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__downtime_minutes
+msgid "Downtime (min)"
+msgstr "وقت التوقف (دقيقة)"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__draft
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__state__draft
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__duration_hours
+msgid "Duration (hrs)"
+msgstr "المدة (ساعة)"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Duration (min)"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__emulsifier
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__emulsifier
+msgid "Emulsifier"
+msgstr "مستحلب"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__date_end
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: sweet_factory_management
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_equipment
+msgid "Equipment"
+msgstr "المعدات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__estimated_cost_per_kg
+msgid "Est. Cost/kg"
+msgstr "التكلفة التقديرية/كجم"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__yield_percentage
+msgid "Expected output vs input, e.g. 95 means 95% of input becomes product"
+msgstr "النسبة المتوقعة للمخرجات مقابل المدخلات، مثلاً 95 تعني أن 95٪ تصبح منتجاً"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__expiry_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__expiry_date
+msgid "Expiry Date"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__extruder
+msgid "Extruder / Former"
+msgstr "بثق / مشكِّل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_close_wizard__quality_result__fail
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__result__fail
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check_line__result__fail
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Fail"
+msgstr "رفض"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Fail Batch"
+msgstr "إخفاق الدفعة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Failed"
+msgstr "فاشلة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Failed / Cancelled"
+msgstr "فشل / ملغى"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__failed
+msgid "Failed/Scrapped"
+msgstr "فاشلة / خردة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__fat_content
+msgid "Fat Content %"
+msgstr "نسبة الدهون %"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__fat
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__fat
+msgid "Fat/Oil/Butter"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__check_stage__final
+msgid "Final Product Check"
+msgstr "فحص المنتج النهائي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__product_id
+msgid "Finished Product"
+msgstr "المنتج النهائي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__flavor
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__flavor
+msgid "Flavor/Essence"
+msgstr "نكهة / جوهر"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_follower_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_follower_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_follower_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_partner_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_partner_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_partner_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__activity_type_icon
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__activity_type_icon
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__activity_type_icon
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__fruit
+msgid "Fruit"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__fruit
+msgid "Fruit/Fruit Pulp"
+msgstr "فاكهة / لب فاكهة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__fudge
+msgid "Fudge"
+msgstr "فدج"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_gelatin_product_template
+msgid "Gelatin"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__gelling
+msgid "Gelling Agent"
+msgstr "عامل التجميد"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__gelling
+msgid "Gelling Agent (Gelatin, Pectin)"
+msgstr "عامل تجميد (جيلاتين، بكتين)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__gift_box
+msgid "Gift Box"
+msgstr "صندوق هدية"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_glucose_product_template
+msgid "Glucose Syrup"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__glucose
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__glucose
+msgid "Glucose/Corn Syrup"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__grade
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Grade"
+msgstr "الدرجة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__grade__a
+msgid "Grade A"
+msgstr "درجة أ"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__grade__b
+msgid "Grade B (Seconds)"
+msgstr "درجة ب (مستوى ثانٍ)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__gummy
+msgid "Gummy / Jelly"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__hard_candy
+msgid "Hard Candy"
+msgstr "حلوى صلبة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__has_message
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__has_message
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__has_message
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_dashboard__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__id
+msgid "ID"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "INGREDIENTS CONSUMED"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_exception_icon
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_exception_icon
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_exception_icon
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__activity_exception_icon
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__activity_exception_icon
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__activity_exception_icon
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__message_needaction
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__message_needaction
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__message_needaction
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__message_has_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__message_has_sms_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__message_has_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__message_has_sms_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__message_has_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__message_has_sms_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__message_has_error
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__in_progress
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "In Production"
+msgstr "في الإنتاج"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__check_stage__in_process
+msgid "In-Process Check"
+msgstr "فحص أثناء الإنتاج"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__wrapper
+msgid "Individual Wrapper"
+msgstr "غلاف فردي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__product_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__product_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Ingredient"
+msgstr "المكوّن"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__ingredient_ids
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Ingredients"
+msgstr "المكونات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__ingredient_line_ids
+msgid "Ingredients Used"
+msgstr "المكونات المستخدمة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine_log__log_type__inspection
+msgid "Inspection"
+msgstr "فحص"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__inspector_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Inspector"
+msgstr "المفتش"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__notes
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Instructions"
+msgstr "تعليمات التصنيع"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_is_follower
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_is_follower
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_is_follower
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__issue_found
+msgid "Issue Found"
+msgstr "المشكلة المكتشفة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__jar
+msgid "Jar"
+msgstr "جرة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__is_key_ingredient
+msgid "Key Ingredient"
+msgstr "مكوّن رئيسي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__last_maintenance_date
+msgid "Last Maintenance Date"
+msgstr "تاريخ آخر صيانة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__write_uid
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__write_date
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__line_cost
+msgid "Line Cost"
+msgstr "تكلفة السطر"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Loading dashboard..."
+msgstr "جاري تحميل لوحة التحكم..."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__location
+msgid "Location / Section"
+msgstr "الموقع / القسم"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__log_count
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Logs"
+msgstr "السجلات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__lollipop
+msgid "Lollipop"
+msgstr "مصاصة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__lot_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Lot"
+msgstr "الوجبة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__lot_id
+msgid "Lot/Serial"
+msgstr "الوجبة / التسلسلي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__machine_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_log_search
+msgid "Machine"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__code
+msgid "Machine Code"
+msgstr "كود الآلة"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_machine.py:0
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_machine_log
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_machine_log
+msgid "Machine Logs"
+msgstr "سجلات الآلات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__name
+msgid "Machine Name"
+msgstr "اسم الآلة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Machine Name..."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__machine_type
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_search
+msgid "Machine Type"
+msgstr "نوع الآلة"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_machine_log
+msgid "Machine Usage / Maintenance Log"
+msgstr "سجل استخدام / صيانة الآلة"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_machine.py:0
+msgid "Machine breakdown reported."
+msgstr "تم الإبلاغ عن عطل في الآلة."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_machine.py:0
+msgid "Machine is now available."
+msgstr "الآلة متاحة الآن."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_machine.py:0
+msgid "Machine moved to maintenance."
+msgstr "تم نقل الآلة إلى الصيانة."
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_machine
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_machine
+msgid "Machines"
+msgstr "الآلات"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Machines Running"
+msgstr "الآلات قيد التشغيل"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine_log__log_type__maintenance
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_log_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_search
+msgid "Maintenance"
+msgstr "صيانة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__maintenance_interval_days
+msgid "Maintenance Interval (days)"
+msgstr "فترة الصيانة (أيام)"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Maintenance Schedule"
+msgstr "جدول الصيانة"
+
+#. module: sweet_factory_management
+#: model:res.groups,name:sweet_factory_management.group_sweet_factory_manager
+msgid "Manager"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__manufacturer
+msgid "Manufacturer"
+msgstr "الشركة المصنِّعة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Mark Done"
+msgstr "تحديد كمكتمل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__marshmallow
+msgid "Marshmallow"
+msgstr "مارشميلو"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__max_value
+msgid "Max"
+msgstr "الحد الأقصى"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__max_value
+msgid "Max Value"
+msgstr "الحد الأقصى"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Measured"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__measured_value
+msgid "Measured Value"
+msgstr "القيمة المقاسة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_has_error
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_has_error
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_has_error
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__category__microbiological
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+msgid "Microbiological"
+msgstr "ميكروبيولوجي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__min_value
+msgid "Min"
+msgstr "الحد الأدنى"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Min / Max"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__min_value
+msgid "Min Value"
+msgstr "الحد الأدنى"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_gummy_bears_product_template
+msgid "Mixed Gummy Bears"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__mixer
+msgid "Mixer / Blender"
+msgstr "خلاط / ممزوج"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__model_number
+msgid "Model Number"
+msgstr "رقم الطراز"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__shift__morning
+msgid "Morning (6:00 - 14:00)"
+msgstr "صباحية (6:00 - 14:00)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check_line__result__na
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "N/A"
+msgstr "غير منطبق"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_date_deadline
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_date_deadline
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_date_deadline
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_summary
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_summary
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_summary
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_type_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_type_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_type_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__next_maintenance_date
+msgid "Next Maintenance Date"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__shift__night
+msgid "Night (22:00 - 6:00)"
+msgstr "ليلية (22:00 - 6:00)"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "No"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__none
+msgid "No Defects"
+msgstr "بدون عيوب"
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_batch_today
+msgid "No active batches today."
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "No batches yet."
+msgstr "لا توجد دفعات بعد."
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_machine_log
+msgid "No machine logs yet."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_quality_check
+msgid "No quality checks yet."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__notes
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__notes
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__notes
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__notes
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__notes
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__notes
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__nougat
+msgid "Nougat"
+msgstr "نوغا"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_needaction_counter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_needaction_counter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_needaction_counter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_has_error_counter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_has_error_counter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_has_error_counter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch_output_line__pieces_per_kg
+msgid "Number of individual pieces per kg (for counting)"
+msgstr "عدد القطع الفردية لكل كجم (للعد)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__message_needaction_counter
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__message_needaction_counter
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__message_needaction_counter
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__message_has_error_counter
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__message_has_error_counter
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__message_has_error_counter
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__parameter_type__numeric
+msgid "Numeric (Range)"
+msgstr "رقمي (نطاق)"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Nutrition Facts"
+msgstr "القيم الغذائية"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Nutritional Info"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__nut
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__nut
+msgid "Nuts/Seeds"
+msgstr "مكسرات / بذور"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "OUTPUT PRODUCTS"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Only confirmed batches can be started."
+msgstr "يمكن بدء الدفعات المؤكدة فقط."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Only confirmed, cancelled or failed batches can be reset."
+msgstr "يمكن إعادة تعيين الدفعات المؤكدة أو الملغاة أو الفاشلة فقط."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Only draft batches can be confirmed."
+msgstr "يمكن تأكيد دفعات المسودة فقط."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_recipe.py:0
+msgid "Only draft recipes can be approved."
+msgstr "يمكن اعتماد الوصفات في حالة المسودة فقط."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__operator_id
+msgid "Operator"
+msgstr "المشغّل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__other
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__other
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__other
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__other
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__output_line_ids
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Output Products"
+msgstr "المنتجات المنتهية"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Overall"
+msgstr "الإجمالي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__overall_score
+msgid "Overall Score"
+msgstr "التقييم الإجمالي"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Overall:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "PROCESS PARAMETERS"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "PRODUCTION BATCH REPORT"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__packaging_type
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__category__packaging
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Packaging"
+msgstr "التعبئة والتغليف"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__check_stage__packaging
+msgid "Packaging Check"
+msgstr "فحص التغليف"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__packaging
+msgid "Packaging Defect"
+msgstr "عيب في التغليف"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__packaging
+msgid "Packaging Machine"
+msgstr "آلة التعبئة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__parameter_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Parameter"
+msgstr "المعامل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__name
+msgid "Parameter Name"
+msgstr "اسم المعامل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__line_ids
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Parameters"
+msgstr "المعاملات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_close_wizard__quality_result__pass
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__result__pass
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check_line__result__pass
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Pass"
+msgstr "نجاح"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Pass / Fail"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__parameter_type__boolean
+msgid "Pass/Fail"
+msgstr "نجاح / رسوب"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__boolean_value
+msgid "Pass?"
+msgstr "اجتاز؟"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Passed"
+msgstr "ناجح"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__result__pending
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__performed_by
+msgid "Performed By"
+msgstr "نُفِّذ بواسطة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__category__physical
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+msgid "Physical"
+msgstr "فيزيائي"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Pieces"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__pieces_per_kg
+msgid "Pieces per kg"
+msgstr "قطع لكل كجم"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Planned (kg)"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__date_planned
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Planned Date"
+msgstr "التاريخ المخطط"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__planned_qty
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__planned_qty
+msgid "Planned Qty"
+msgstr "الكمية المخططة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__planned_qty
+msgid "Planned Qty (kg)"
+msgstr "الكمية المخططة (كجم)"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_recipe.py:0
+msgid "Please add ingredients before approving."
+msgstr "يرجى إضافة المكونات قبل الاعتماد."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Please enter actual output quantities."
+msgstr "يرجى إدخال كميات الإنتاج الفعلية."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Please select a recipe."
+msgstr "يرجى تحديد وصفة."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__praline
+msgid "Praline"
+msgstr "براليني"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__grade__a_plus
+msgid "Premium (A+)"
+msgstr "ممتاز (A+)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__preservative
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__preservative
+msgid "Preservative"
+msgstr "مادة حافظة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__machine_id
+msgid "Primary Machine"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Print Report"
+msgstr "طباعة التقرير"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Process"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Process Parameters"
+msgstr "معاملات العملية"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__product_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Product"
+msgstr "المنتج"
+
+#. module: sweet_factory_management
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_production
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_log_search
+msgid "Production"
+msgstr "الإنتاج"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_batch
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__batch_id
+msgid "Production Batch"
+msgstr "دفعة الإنتاج"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_recipe.py:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_batch
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__batch_ids
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_batch
+msgid "Production Batches"
+msgstr "دفعات الإنتاج"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__production_date
+msgid "Production Date"
+msgstr "تاريخ الإنتاج"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_machine
+msgid "Production Machine / Equipment"
+msgstr "آلة الإنتاج / المعدات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine_log__log_type__production
+msgid "Production Run"
+msgstr "تشغيل إنتاج"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "Production started."
+msgstr "بدأ الإنتاج."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__purchase_date
+msgid "Purchase Date"
+msgstr "تاريخ الشراء"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+msgid "QC Check"
+msgstr "فحص الجودة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__quality_check_count
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "QC Checks"
+msgstr "فحوصات الجودة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__quality_passed
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "QC Passed"
+msgstr "اجتياز مراقبة الجودة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "QC Reference:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__quality_result
+msgid "QC Result"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "QUALITY CONTROL SUMMARY"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__qty_produced
+msgid "Qty Produced (kg)"
+msgstr "الكمية المنتجة (كجم)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__quantity_per_batch
+msgid "Qty per Batch"
+msgstr "الكمية لكل دفعة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__check_id
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch__state__quality_check
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Quality Check"
+msgstr "فحص الجودة"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_quality_parameter
+msgid "Quality Check Parameter"
+msgstr "معامل فحص الجودة"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_quality_check_line
+msgid "Quality Check Parameter Result"
+msgstr "نتيجة معامل فحص الجودة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_quality_check
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__quality_check_ids
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_quality
+msgid "Quality Checks"
+msgstr "فحوصات الجودة"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_quality_check
+msgid "Quality Control Inspection"
+msgstr "فحص مراقبة الجودة"
+
+#. module: sweet_factory_management
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_quality_parameter
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__quality_parameter_ids
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_quality_parameter
+msgid "Quality Parameters"
+msgstr "معاملات الجودة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Quality Standards"
+msgstr "معايير الجودة"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_quality_check.py:0
+msgid "Quality check FAILED."
+msgstr "رُسِب في فحص الجودة."
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_quality_check.py:0
+msgid "Quality check PASSED."
+msgstr "اجتاز فحص الجودة."
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe_ingredient__quantity_per_batch
+msgid "Quantity needed for one standard batch"
+msgstr "الكمية المطلوبة لدفعة قياسية واحدة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "REJECTION / FAILURE REASON"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Real-time overview of production, quality & equipment"
+msgstr "نظرة عامة في الوقت الفعلي للإنتاج والجودة والمعدات"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__recipe_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__recipe_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__recipe_id
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Recipe"
+msgstr "الوصفة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__code
+msgid "Recipe Code"
+msgstr "كود الوصفة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__name
+msgid "Recipe Name"
+msgstr "اسم الوصفة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Recipe Name..."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Recipe Reference"
+msgstr "مرجع الوصفة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Recipe Target"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_recipe.py:0
+msgid "Recipe approved for production."
+msgstr "تم اعتماد الوصفة للإنتاج."
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.js:0
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_recipe
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_recipe
+msgid "Recipes"
+msgstr "الوصفات"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_red_color_product_template
+msgid "Red Food Color"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_machine
+msgid "Register your factory machines!"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__grade__reject
+msgid "Reject / Scrap"
+msgstr "مرفوض / خردة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__rejection_reason
+msgid "Rejection/Failure Reason"
+msgstr "سبب الرفض / الإخفاق"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__remarks
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__remarks
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine_log__log_type__repair
+msgid "Repair"
+msgstr "إصلاح"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Report Breakdown"
+msgstr "الإبلاغ عن عطل"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى المسودة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__activity_user_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__activity_user_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__activity_user_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__result
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__result
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_search
+msgid "Result"
+msgstr "النتيجة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__text_value
+msgid "Result Text"
+msgstr "النص التفسيري"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__state__retired
+msgid "Retired"
+msgstr "متقاعدة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__state__running
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_search
+msgid "Running"
+msgstr "تعمل"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Runtime hrs"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__message_has_sms_error
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__message_has_sms_error
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__message_has_sms_error
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Scores (1-10)"
+msgstr "التقييمات (1-10)"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+msgid "Sensory"
+msgstr "حسي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__category__sensory
+msgid "Sensory / Organoleptic"
+msgstr "حسي / حواسي"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_check_form
+msgid "Sensory Evaluation"
+msgstr "التقييم الحسي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__sequence
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__sequence
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__sequence
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__sequence
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__serial_number
+msgid "Serial Number"
+msgstr "الرقم التسلسلي"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Set Available"
+msgstr "تعيين كمتاحة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_quality_parameter
+msgid "Set acceptable ranges for physical, chemical, and sensory properties."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__shelf_life_days
+msgid "Shelf Life (days)"
+msgstr "مدة الصلاحية (أيام)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__shift
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Shift"
+msgstr "الوردية"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__size
+msgid "Size/Shape Defect"
+msgstr "عيب في الحجم / الشكل"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe__sweet_type__soft_candy
+msgid "Soft Candy / Toffee"
+msgstr "حلوى ناعمة / توفي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__standard_batch_qty
+msgid "Standard Batch Size (kg)"
+msgstr "حجم الدفعة القياسي (كجم)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__date_start
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Start Maintenance"
+msgstr "بدء الصيانة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Start Production"
+msgstr "بدء الإنتاج"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__state
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__state
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__activity_state
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__activity_state
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__activity_state
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_form
+msgid "Storage & Shelf Life"
+msgstr "التخزين ومدة الصلاحية"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__storage_temp
+msgid "Storage Temperature"
+msgstr "درجة حرارة التخزين"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_strawberry_flavor_product_template
+msgid "Strawberry Flavor"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_strawberry_candy_product_template
+msgid "Strawberry Hard Candy"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_ingredient_line__ingredient_type__sugar
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_recipe_ingredient__ingredient_type__sugar
+msgid "Sugar"
+msgstr "سكر"
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_sugar_product_template
+msgid "Sugar (Raw)"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__sugar_content
+msgid "Sugar Content %"
+msgstr "نسبة السكر %"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__cooker
+msgid "Sugar Cooker / Kettle"
+msgstr "طناجر طهي السكر / غلاية"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__supervisor_id
+msgid "Supervisor"
+msgstr "المشرف"
+
+#. module: sweet_factory_management
+#: model:ir.ui.menu,name:sweet_factory_management.menu_sweet_factory_root
+#: model:res.groups.privilege,name:sweet_factory_management.res_groups_privilege_sweet_factory
+msgid "Sweet Factory"
+msgstr "مصنع الحلوى"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.actions.client,name:sweet_factory_management.action_sweet_dashboard
+#: model:ir.model,name:sweet_factory_management.model_sweet_dashboard
+msgid "Sweet Factory Dashboard"
+msgstr "لوحة تحكم مصنع الحلوى"
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_recipe
+msgid "Sweet Recipe / Formula"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model,name:sweet_factory_management.model_sweet_recipe_ingredient
+msgid "Sweet Recipe Ingredient"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__sweet_type
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__sweet_type
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__sweet_type
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_recipe_search
+msgid "Sweet Type"
+msgstr "نوع الحلوى"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__target_value
+msgid "Target Value"
+msgstr "القيمة المستهدفة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__taste_score
+msgid "Taste Score (1-10)"
+msgstr "تقييم الطعم (1-10)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__taste
+msgid "Taste/Flavor Defect"
+msgstr "عيب في الطعم / النكهة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__parameter_type__text
+msgid "Text Description"
+msgstr "وصف نصي"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_check__defect_type__texture
+msgid "Texture Defect"
+msgstr "عيب في القوام"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__texture_score
+msgid "Texture Score (1-10)"
+msgstr "تقييم القوام (1-10)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_batch_output_line__packaging_type__tin
+msgid "Tin / Can"
+msgstr "علبة معدنية"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_search
+msgid "Today"
+msgstr "اليوم"
+
+#. module: sweet_factory_management
+#: model:ir.actions.act_window,name:sweet_factory_management.action_sweet_batch_today
+msgid "Today's Batches"
+msgstr "دفعات اليوم"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__total_ingredient_cost
+msgid "Total Ingredient Cost"
+msgstr "إجمالي تكلفة المكونات"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Total Ingredient Cost:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__total_pieces
+msgid "Total Pieces"
+msgstr "إجمالي القطع"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "Total Recipes"
+msgstr "إجمالي الوصفات"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__total_runtime_hours
+msgid "Total Runtime (hrs)"
+msgstr "إجمالي وقت التشغيل (ساعة)"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_close_wizard__actual_yield
+msgid "Total Yield (kg)"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_batch_form
+msgid "Traceability"
+msgstr "التتبع"
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_machine
+msgid "Track machine status, maintenance schedules and production logs."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.actions.act_window,help:sweet_factory_management.action_sweet_batch
+msgid ""
+"Track production runs from start to finish with full ingredient consumption "
+"and output recording."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__ingredient_type
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine_log__log_type
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__parameter_type
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__parameter_type
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__ingredient_type
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_log_search
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_quality_parameter_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__activity_exception_decoration
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__activity_exception_decoration
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__activity_exception_decoration
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__state__maintenance
+msgid "Under Maintenance"
+msgstr "تحت الصيانة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_parameter__uom
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__product_uom_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_output_line__product_uom_id
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check_line__uom
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe_ingredient__product_uom_id
+msgid "UoM"
+msgstr "وحدة القياس"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__log_ids
+msgid "Usage / Maintenance Logs"
+msgstr "سجلات الاستخدام والصيانة"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.view_sweet_machine_form
+msgid "Usage Logs"
+msgstr "سجلات الاستخدام"
+
+#. module: sweet_factory_management
+#: model:res.groups,name:sweet_factory_management.group_sweet_factory_user
+msgid "User"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:product.template,name:sweet_factory_management.demo_product_vanilla_product_template
+msgid "Vanilla Essence"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch_ingredient_line__variance
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Variance"
+msgstr "الانحراف"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__website_message_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_machine__website_message_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_quality_check__website_message_ids
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_batch__website_message_ids
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_machine__website_message_ids
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_check__website_message_ids
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_recipe__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__weigher
+msgid "Weighing Machine"
+msgstr "آلة الوزن"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_quality_parameter__category__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields.selection,name:sweet_factory_management.selection__sweet_machine__machine_type__wrapper
+msgid "Wrapping Machine"
+msgstr "آلة التغليف"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "Yes"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_recipe__yield_percentage
+msgid "Yield %"
+msgstr "نسبة الإنتاجية %"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,field_description:sweet_factory_management.field_sweet_batch__yield_variance
+msgid "Yield Variance (kg)"
+msgstr "انحراف الإنتاجية (كجم)"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "approved"
+msgstr "معتمدة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "available"
+msgstr "متاح"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_batch.py:0
+msgid "batch_id"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "completed batches"
+msgstr "الدفعات المكتملة"
+
+#. module: sweet_factory_management
+#: model:ir.model.fields,help:sweet_factory_management.field_sweet_quality_parameter__uom
+msgid "e.g. %, °C, g, brix"
+msgstr "مثال: ٪، °م، بريكس"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "in QC"
+msgstr "في مراقبة الجودة"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_machine.py:0
+msgid "machine_id"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "pending"
+msgstr "معلق"
+
+#. module: sweet_factory_management
+#. odoo-python
+#: code:addons/sweet_factory_management/models/sweet_recipe.py:0
+msgid "recipe_id"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "this month"
+msgstr "هذا الشهر"
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "| Inspector:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "| Result:"
+msgstr ""
+
+#. module: sweet_factory_management
+#: model_terms:ir.ui.view,arch_db:sweet_factory_management.report_sweet_batch_template
+msgid "| Stage:"
+msgstr ""
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "↻ Refresh"
+msgstr "↻ تحديث"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "⚙️ Equipment Status"
+msgstr "⚙️ حالة المعدات"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "🏭 Batch Status"
+msgstr "🏭 حالة الدفعة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "🔬 Quality Control"
+msgstr "🔬 مراقبة الجودة"
+
+#. module: sweet_factory_management
+#. odoo-javascript
+#: code:addons/sweet_factory_management/static/src/components/dashboard/dashboard.xml:0
+msgid "🕐 Recent Production Batches"
+msgstr "🕐 دفعات الإنتاج الأخيرة"

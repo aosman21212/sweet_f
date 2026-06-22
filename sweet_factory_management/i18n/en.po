@@ -1,0 +1,591 @@
+# English translation for Sweet Factory Management
+# Copyright (C) LeapAI
+# This file is distributed under the same license as the Sweet Factory Management module.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 19.0 sweet_factory_management\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-22 00:00+0000\n"
+"PO-Revision-Date: 2026-06-22 00:00+0000\n"
+"Last-Translator: LeapAI <info@leapai.ai>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: sweet_factory_management
+msgid "Sweet Factory Management"
+msgstr "Sweet Factory Management"
+
+#. module: sweet_factory_management
+msgid "Production Batch"
+msgstr "Production Batch"
+
+#. module: sweet_factory_management
+msgid "Batch Number"
+msgstr "Batch Number"
+
+#. module: sweet_factory_management
+msgid "Recipe"
+msgstr "Recipe"
+
+#. module: sweet_factory_management
+msgid "Sweet Type"
+msgstr "Sweet Type"
+
+#. module: sweet_factory_management
+msgid "Planned Date"
+msgstr "Planned Date"
+
+#. module: sweet_factory_management
+msgid "Start Date"
+msgstr "Start Date"
+
+#. module: sweet_factory_management
+msgid "End Date"
+msgstr "End Date"
+
+#. module: sweet_factory_management
+msgid "Planned Qty (kg)"
+msgstr "Planned Qty (kg)"
+
+#. module: sweet_factory_management
+msgid "Actual Yield (kg)"
+msgstr "Actual Yield (kg)"
+
+#. module: sweet_factory_management
+msgid "Actual Yield %"
+msgstr "Actual Yield %"
+
+#. module: sweet_factory_management
+msgid "Production Date"
+msgstr "Production Date"
+
+#. module: sweet_factory_management
+msgid "Expiry Date"
+msgstr "Expiry Date"
+
+#. module: sweet_factory_management
+msgid "Shift"
+msgstr "Shift"
+
+#. module: sweet_factory_management
+msgid "Morning (6:00 - 14:00)"
+msgstr "Morning (6:00 - 14:00)"
+
+#. module: sweet_factory_management
+msgid "Afternoon (14:00 - 22:00)"
+msgstr "Afternoon (14:00 - 22:00)"
+
+#. module: sweet_factory_management
+msgid "Night (22:00 - 6:00)"
+msgstr "Night (22:00 - 6:00)"
+
+#. module: sweet_factory_management
+msgid "Supervisor"
+msgstr "Supervisor"
+
+#. module: sweet_factory_management
+msgid "Operator"
+msgstr "Operator"
+
+#. module: sweet_factory_management
+msgid "Primary Machine"
+msgstr "Primary Machine"
+
+#. module: sweet_factory_management
+msgid "Draft"
+msgstr "Draft"
+
+#. module: sweet_factory_management
+msgid "Confirmed"
+msgstr "Confirmed"
+
+#. module: sweet_factory_management
+msgid "In Production"
+msgstr "In Production"
+
+#. module: sweet_factory_management
+msgid "Quality Check"
+msgstr "Quality Check"
+
+#. module: sweet_factory_management
+msgid "Done"
+msgstr "Done"
+
+#. module: sweet_factory_management
+msgid "Failed/Scrapped"
+msgstr "Failed/Scrapped"
+
+#. module: sweet_factory_management
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: sweet_factory_management
+msgid "Ingredients Used"
+msgstr "Ingredients Used"
+
+#. module: sweet_factory_management
+msgid "Output Products"
+msgstr "Output Products"
+
+#. module: sweet_factory_management
+msgid "Quality Checks"
+msgstr "Quality Checks"
+
+#. module: sweet_factory_management
+msgid "Sweet Recipe"
+msgstr "Sweet Recipe"
+
+#. module: sweet_factory_management
+msgid "Recipe Name"
+msgstr "Recipe Name"
+
+#. module: sweet_factory_management
+msgid "Hard Candy"
+msgstr "Hard Candy"
+
+#. module: sweet_factory_management
+msgid "Soft Candy / Toffee"
+msgstr "Soft Candy / Toffee"
+
+#. module: sweet_factory_management
+msgid "Chocolate"
+msgstr "Chocolate"
+
+#. module: sweet_factory_management
+msgid "Gummy / Jelly"
+msgstr "Gummy / Jelly"
+
+#. module: sweet_factory_management
+msgid "Lollipop"
+msgstr "Lollipop"
+
+#. module: sweet_factory_management
+msgid "Marshmallow"
+msgstr "Marshmallow"
+
+#. module: sweet_factory_management
+msgid "Caramel / Fudge"
+msgstr "Caramel / Fudge"
+
+#. module: sweet_factory_management
+msgid "Praline / Nougat"
+msgstr "Praline / Nougat"
+
+#. module: sweet_factory_management
+msgid "Other"
+msgstr "Other"
+
+#. module: sweet_factory_management
+msgid "Batch Size (kg)"
+msgstr "Batch Size (kg)"
+
+#. module: sweet_factory_management
+msgid "Estimated Cost/kg"
+msgstr "Estimated Cost/kg"
+
+#. module: sweet_factory_management
+msgid "Expected Yield %"
+msgstr "Expected Yield %"
+
+#. module: sweet_factory_management
+msgid "Shelf Life (days)"
+msgstr "Shelf Life (days)"
+
+#. module: sweet_factory_management
+msgid "Ingredients"
+msgstr "Ingredients"
+
+#. module: sweet_factory_management
+msgid "Process Parameters"
+msgstr "Process Parameters"
+
+#. module: sweet_factory_management
+msgid "Cooking Temperature (°C)"
+msgstr "Cooking Temperature (°C)"
+
+#. module: sweet_factory_management
+msgid "Mixing Time (min)"
+msgstr "Mixing Time (min)"
+
+#. module: sweet_factory_management
+msgid "Cooling Temperature (°C)"
+msgstr "Cooling Temperature (°C)"
+
+#. module: sweet_factory_management
+msgid "Allergens"
+msgstr "Allergens"
+
+#. module: sweet_factory_management
+msgid "Contains Nuts"
+msgstr "Contains Nuts"
+
+#. module: sweet_factory_management
+msgid "Contains Dairy"
+msgstr "Contains Dairy"
+
+#. module: sweet_factory_management
+msgid "Contains Gluten"
+msgstr "Contains Gluten"
+
+#. module: sweet_factory_management
+msgid "Contains Eggs"
+msgstr "Contains Eggs"
+
+#. module: sweet_factory_management
+msgid "Contains Soy"
+msgstr "Contains Soy"
+
+#. module: sweet_factory_management
+msgid "Quality Parameters"
+msgstr "Quality Parameters"
+
+#. module: sweet_factory_management
+msgid "Quality Control Inspection"
+msgstr "Quality Control Inspection"
+
+#. module: sweet_factory_management
+msgid "Reference"
+msgstr "Reference"
+
+#. module: sweet_factory_management
+msgid "Batch"
+msgstr "Batch"
+
+#. module: sweet_factory_management
+msgid "Check Date"
+msgstr "Check Date"
+
+#. module: sweet_factory_management
+msgid "Inspector"
+msgstr "Inspector"
+
+#. module: sweet_factory_management
+msgid "In-Process Check"
+msgstr "In-Process Check"
+
+#. module: sweet_factory_management
+msgid "Final Product Check"
+msgstr "Final Product Check"
+
+#. module: sweet_factory_management
+msgid "Packaging Check"
+msgstr "Packaging Check"
+
+#. module: sweet_factory_management
+msgid "Pass"
+msgstr "Pass"
+
+#. module: sweet_factory_management
+msgid "Fail"
+msgstr "Fail"
+
+#. module: sweet_factory_management
+msgid "Conditional Pass"
+msgstr "Conditional Pass"
+
+#. module: sweet_factory_management
+msgid "Pending"
+msgstr "Pending"
+
+#. module: sweet_factory_management
+msgid "Result"
+msgstr "Result"
+
+#. module: sweet_factory_management
+msgid "Taste Score (1-10)"
+msgstr "Taste Score (1-10)"
+
+#. module: sweet_factory_management
+msgid "Color Score (1-10)"
+msgstr "Color Score (1-10)"
+
+#. module: sweet_factory_management
+msgid "Texture Score (1-10)"
+msgstr "Texture Score (1-10)"
+
+#. module: sweet_factory_management
+msgid "Aroma Score (1-10)"
+msgstr "Aroma Score (1-10)"
+
+#. module: sweet_factory_management
+msgid "Overall Score"
+msgstr "Overall Score"
+
+#. module: sweet_factory_management
+msgid "Production Machine / Equipment"
+msgstr "Production Machine / Equipment"
+
+#. module: sweet_factory_management
+msgid "Machine Name"
+msgstr "Machine Name"
+
+#. module: sweet_factory_management
+msgid "Machine Code"
+msgstr "Machine Code"
+
+#. module: sweet_factory_management
+msgid "Sugar Cooker / Kettle"
+msgstr "Sugar Cooker / Kettle"
+
+#. module: sweet_factory_management
+msgid "Mixer / Blender"
+msgstr "Mixer / Blender"
+
+#. module: sweet_factory_management
+msgid "Extruder / Former"
+msgstr "Extruder / Former"
+
+#. module: sweet_factory_management
+msgid "Wrapping Machine"
+msgstr "Wrapping Machine"
+
+#. module: sweet_factory_management
+msgid "Depositor / Moulding"
+msgstr "Depositor / Moulding"
+
+#. module: sweet_factory_management
+msgid "Cooling Tunnel / Belt"
+msgstr "Cooling Tunnel / Belt"
+
+#. module: sweet_factory_management
+msgid "Coating / Enrobing"
+msgstr "Coating / Enrobing"
+
+#. module: sweet_factory_management
+msgid "Packaging Machine"
+msgstr "Packaging Machine"
+
+#. module: sweet_factory_management
+msgid "Conveyor Belt"
+msgstr "Conveyor Belt"
+
+#. module: sweet_factory_management
+msgid "Weighing Machine"
+msgstr "Weighing Machine"
+
+#. module: sweet_factory_management
+msgid "Available"
+msgstr "Available"
+
+#. module: sweet_factory_management
+msgid "Running"
+msgstr "Running"
+
+#. module: sweet_factory_management
+msgid "Under Maintenance"
+msgstr "Under Maintenance"
+
+#. module: sweet_factory_management
+msgid "Breakdown"
+msgstr "Breakdown"
+
+#. module: sweet_factory_management
+msgid "Retired"
+msgstr "Retired"
+
+#. module: sweet_factory_management
+msgid "Last Maintenance Date"
+msgstr "Last Maintenance Date"
+
+#. module: sweet_factory_management
+msgid "Next Maintenance Date"
+msgstr "Next Maintenance Date"
+
+#. module: sweet_factory_management
+msgid "Maintenance Interval (days)"
+msgstr "Maintenance Interval (days)"
+
+#. module: sweet_factory_management
+msgid "Total Runtime Hours"
+msgstr "Total Runtime Hours"
+
+#. module: sweet_factory_management
+msgid "Usage / Maintenance Log"
+msgstr "Usage / Maintenance Log"
+
+#. module: sweet_factory_management
+msgid "Capacity (kg/hour)"
+msgstr "Capacity (kg/hour)"
+
+#. module: sweet_factory_management
+msgid "Location / Section"
+msgstr "Location / Section"
+
+#. module: sweet_factory_management
+msgid "Manufacturer"
+msgstr "Manufacturer"
+
+#. module: sweet_factory_management
+msgid "Model Number"
+msgstr "Model Number"
+
+#. module: sweet_factory_management
+msgid "Serial Number"
+msgstr "Serial Number"
+
+#. module: sweet_factory_management
+msgid "Purchase Date"
+msgstr "Purchase Date"
+
+#. module: sweet_factory_management
+msgid "Notes"
+msgstr "Notes"
+
+#. module: sweet_factory_management
+#. dashboard
+msgid "Sweet Factory Dashboard"
+msgstr "Sweet Factory Dashboard"
+
+#. module: sweet_factory_management
+#. dashboard
+msgid "Real-time overview of production, quality & equipment"
+msgstr "Real-time overview of production, quality & equipment"
+
+#. module: sweet_factory_management
+#. dashboard
+msgid "↻ Refresh"
+msgstr "↻ Refresh"
+
+#. module: sweet_factory_management
+#. dashboard
+msgid "Loading dashboard..."
+msgstr "Loading dashboard..."
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "Total Recipes"
+msgstr "Total Recipes"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "In Production"
+msgstr "In Production"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "this month"
+msgstr "this month"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "Batches Done"
+msgstr "Batches Done"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "in QC"
+msgstr "in QC"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "Avg Yield Rate"
+msgstr "Avg Yield Rate"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "completed batches"
+msgstr "completed batches"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "QC Passed"
+msgstr "QC Passed"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "pending"
+msgstr "pending"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "Machines Running"
+msgstr "Machines Running"
+
+#. module: sweet_factory_management
+#. dashboard / kpi
+msgid "available"
+msgstr "available"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "🏭 Batch Status"
+msgstr "🏭 Batch Status"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "Failed / Cancelled"
+msgstr "Failed / Cancelled"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "🔬 Quality Control"
+msgstr "🔬 Quality Control"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "Passed"
+msgstr "Passed"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "Failed"
+msgstr "Failed"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "⚙️ Equipment Status"
+msgstr "⚙️ Equipment Status"
+
+#. module: sweet_factory_management
+#. dashboard / panel
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#. module: sweet_factory_management
+#. dashboard / table
+msgid "🕐 Recent Production Batches"
+msgstr "🕐 Recent Production Batches"
+
+#. module: sweet_factory_management
+#. dashboard / table
+msgid "Batch #"
+msgstr "Batch #"
+
+#. module: sweet_factory_management
+#. dashboard / table
+msgid "Yield %"
+msgstr "Yield %"
+
+#. module: sweet_factory_management
+#. dashboard / table
+msgid "No batches yet."
+msgstr "No batches yet."
+
+#. module: sweet_factory_management
+#. dashboard / table
+msgid "Create one →"
+msgstr "Create one →"
+
+#. module: sweet_factory_management
+#. dashboard / state label
+msgid "QC Check"
+msgstr "QC Check"
+
+#. module: sweet_factory_management
+#. dashboard / navigation
+msgid "Production Batches"
+msgstr "Production Batches"
+
+#. module: sweet_factory_management
+#. dashboard / navigation
+msgid "Recipes"
+msgstr "Recipes"
+
+#. module: sweet_factory_management
+#. dashboard / navigation
+msgid "Machines"
+msgstr "Machines"

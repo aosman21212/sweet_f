@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sweet_batch_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <!-- Report Header -->
+                        <div class="row mb-4">
+                            <div class="col-8">
+                                <h2 class="text-primary">PRODUCTION BATCH REPORT</h2>
+                                <h3><t t-esc="doc.name"/></h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <p class="mb-0">
+                                    <strong>Date Printed:</strong>
+                                    <t t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y %H:%M')"/>
+                                </p>
+                                <p class="mb-0">
+                                    <strong>Status:</strong>
+                                    <span t-field="doc.state"/>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Batch Information Box -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th colspan="4" class="text-center bg-primary text-white">BATCH INFORMATION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Batch Number</strong></td>
+                                            <td><t t-esc="doc.name"/></td>
+                                            <td><strong>Recipe</strong></td>
+                                            <td><t t-esc="doc.recipe_id.name"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sweet Type</strong></td>
+                                            <td><span t-field="doc.sweet_type"/></td>
+                                            <td><strong>Shift</strong></td>
+                                            <td><span t-field="doc.shift"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Planned Qty (kg)</strong></td>
+                                            <td><t t-esc="'%.2f' % doc.planned_qty"/></td>
+                                            <td><strong>Actual Yield (kg)</strong></td>
+                                            <td><t t-esc="'%.2f' % doc.actual_yield"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Planned Date</strong></td>
+                                            <td>
+                                                <t t-if="doc.date_planned">
+                                                    <t t-esc="doc.date_planned.strftime('%d/%m/%Y %H:%M')"/>
+                                                </t>
+                                            </td>
+                                            <td><strong>Start Date</strong></td>
+                                            <td>
+                                                <t t-if="doc.date_start">
+                                                    <t t-esc="doc.date_start.strftime('%d/%m/%Y %H:%M')"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>End Date</strong></td>
+                                            <td>
+                                                <t t-if="doc.date_end">
+                                                    <t t-esc="doc.date_end.strftime('%d/%m/%Y %H:%M')"/>
+                                                </t>
+                                            </td>
+                                            <td><strong>Production Date</strong></td>
+                                            <td>
+                                                <t t-if="doc.production_date">
+                                                    <t t-esc="doc.production_date.strftime('%d/%m/%Y')"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Expiry Date</strong></td>
+                                            <td>
+                                                <t t-if="doc.expiry_date">
+                                                    <t t-esc="doc.expiry_date.strftime('%d/%m/%Y')"/>
+                                                </t>
+                                            </td>
+                                            <td><strong>Lot / Batch No.</strong></td>
+                                            <td><t t-esc="doc.lot_id.name or '-'"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Supervisor</strong></td>
+                                            <td><t t-esc="doc.supervisor_id.name or '-'"/></td>
+                                            <td><strong>Primary Machine</strong></td>
+                                            <td><t t-esc="doc.machine_id.name or '-'"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Yield Variance (kg)</strong></td>
+                                            <td><t t-esc="'%.2f' % doc.yield_variance"/></td>
+                                            <td><strong>Actual Yield %</strong></td>
+                                            <td><t t-esc="'%.1f' % doc.yield_percentage_actual"/>%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Process Parameters -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h5 class="text-primary border-bottom pb-1">PROCESS PARAMETERS</h5>
+                                <table class="table table-bordered table-sm">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Parameter</th>
+                                            <th class="text-center">Recipe Target</th>
+                                            <th class="text-center">Actual</th>
+                                            <th class="text-center">Variance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cooking Temperature (°C)</td>
+                                            <td class="text-center">
+                                                <t t-esc="'%.1f' % doc.recipe_id.cooking_temp"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <t t-esc="'%.1f' % doc.actual_cooking_temp"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <t t-esc="'%.1f' % (doc.actual_cooking_temp - doc.recipe_id.cooking_temp)"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cooling Temperature (°C)</td>
+                                            <td class="text-center">
+                                                <t t-esc="'%.1f' % doc.recipe_id.cooling_temp"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <t t-esc="'%.1f' % doc.actual_cooling_temp"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <t t-esc="'%.1f' % (doc.actual_cooling_temp - doc.recipe_id.cooling_temp)"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Duration (min)</td>
+                                            <td class="text-center">
+                                                <t t-esc="doc.recipe_id.cooking_duration"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <t t-esc="doc.actual_duration"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <t t-esc="doc.actual_duration - doc.recipe_id.cooking_duration"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Ingredients Consumed -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h5 class="text-primary border-bottom pb-1">INGREDIENTS CONSUMED</h5>
+                                <table class="table table-bordered table-sm">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Ingredient</th>
+                                            <th class="text-center">Type</th>
+                                            <th class="text-right">Planned (kg)</th>
+                                            <th class="text-right">Actual (kg)</th>
+                                            <th class="text-right">Variance</th>
+                                            <th class="text-right">Cost</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.ingredient_line_ids" t-as="line">
+                                            <tr>
+                                                <td><t t-esc="line.product_id.name"/></td>
+                                                <td class="text-center">
+                                                    <span t-field="line.ingredient_type"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <t t-esc="'%.3f' % line.planned_qty"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <t t-esc="'%.3f' % line.actual_qty"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <t t-esc="'%.3f' % line.variance"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <t t-esc="'%.2f' % line.line_cost"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr class="font-weight-bold bg-light">
+                                            <td colspan="5" class="text-right">Total Ingredient Cost:</td>
+                                            <td class="text-right">
+                                                <t t-esc="'%.2f' % doc.total_ingredient_cost"/>
+                                                <t t-esc="' ' + doc.currency_id.symbol"/>
+                                            </td>
+                                        </tr>
+                                        <tr class="font-weight-bold bg-light">
+                                            <td colspan="5" class="text-right">Cost per kg:</td>
+                                            <td class="text-right">
+                                                <t t-esc="'%.2f' % doc.cost_per_kg"/>
+                                                <t t-esc="' ' + doc.currency_id.symbol"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Output Products -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h5 class="text-primary border-bottom pb-1">OUTPUT PRODUCTS</h5>
+                                <table class="table table-bordered table-sm">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th class="text-center">Grade</th>
+                                            <th class="text-center">Packaging</th>
+                                            <th class="text-right">Planned (kg)</th>
+                                            <th class="text-right">Actual (kg)</th>
+                                            <th class="text-right">Pieces</th>
+                                            <th>Lot</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.output_line_ids" t-as="out">
+                                            <tr>
+                                                <td><t t-esc="out.product_id.name"/></td>
+                                                <td class="text-center"><span t-field="out.grade"/></td>
+                                                <td class="text-center"><span t-field="out.packaging_type"/></td>
+                                                <td class="text-right"><t t-esc="'%.2f' % out.planned_qty"/></td>
+                                                <td class="text-right"><t t-esc="'%.2f' % out.actual_qty"/></td>
+                                                <td class="text-right">
+                                                    <t t-if="out.total_pieces">
+                                                        <t t-esc="'%.0f' % out.total_pieces"/>
+                                                    </t>
+                                                    <t t-else="">-</t>
+                                                </td>
+                                                <td><t t-esc="out.lot_id.name or '-'"/></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Quality Summary -->
+                        <t t-if="doc.quality_check_ids">
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="text-primary border-bottom pb-1">QUALITY CONTROL SUMMARY</h5>
+                                    <t t-foreach="doc.quality_check_ids" t-as="qc">
+                                        <table class="table table-bordered table-sm mb-2">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th colspan="4">
+                                                        QC Reference: <t t-esc="qc.name"/>
+                                                        | Stage: <span t-field="qc.check_stage"/>
+                                                        | Inspector: <t t-esc="qc.inspector_id.name"/>
+                                                        | Result:
+                                                        <strong>
+                                                            <t t-if="qc.result == 'pass'">
+                                                                <span style="color: green;">PASS</span>
+                                                            </t>
+                                                            <t t-elif="qc.result == 'fail'">
+                                                                <span style="color: red;">FAIL</span>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span t-field="qc.result"/>
+                                                            </t>
+                                                        </strong>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Parameter</th>
+                                                    <th class="text-center">Min / Max</th>
+                                                    <th class="text-center">Measured</th>
+                                                    <th class="text-center">Result</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="qc.line_ids" t-as="ql">
+                                                    <tr>
+                                                        <td><t t-esc="ql.parameter_id.name"/></td>
+                                                        <td class="text-center">
+                                                            <t t-if="ql.parameter_type == 'numeric'">
+                                                                <t t-esc="'%.2f' % ql.min_value"/> /
+                                                                <t t-esc="'%.2f' % ql.max_value"/>
+                                                                <t t-if="ql.uom"> <t t-esc="ql.uom"/></t>
+                                                            </t>
+                                                            <t t-elif="ql.parameter_type == 'boolean'">Pass / Fail</t>
+                                                            <t t-else="">-</t>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <t t-if="ql.parameter_type == 'numeric'">
+                                                                <t t-esc="'%.2f' % ql.measured_value"/>
+                                                                <t t-if="ql.uom"> <t t-esc="ql.uom"/></t>
+                                                            </t>
+                                                            <t t-elif="ql.parameter_type == 'boolean'">
+                                                                <t t-if="ql.boolean_value">Yes</t>
+                                                                <t t-else="">No</t>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <t t-esc="ql.text_value or '-'"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <strong>
+                                                                <t t-if="ql.result == 'pass'">
+                                                                    <span style="color: green;">PASS</span>
+                                                                </t>
+                                                                <t t-elif="ql.result == 'fail'">
+                                                                    <span style="color: red;">FAIL</span>
+                                                                </t>
+                                                                <t t-else="">N/A</t>
+                                                            </strong>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                        <t t-if="qc.taste_score or qc.color_score or qc.texture_score or qc.aroma_score">
+                                            <div class="row mb-2">
+                                                <div class="col-6">
+                                                    <small>
+                                                        <strong>Sensory Scores:</strong>
+                                                        Taste: <t t-esc="qc.taste_score"/>/10 |
+                                                        Color: <t t-esc="qc.color_score"/>/10 |
+                                                        Texture: <t t-esc="qc.texture_score"/>/10 |
+                                                        Aroma: <t t-esc="qc.aroma_score"/>/10 |
+                                                        <strong>Overall: <t t-esc="'%.1f' % qc.overall_score"/>/10</strong>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </t>
+                                        <t t-if="qc.remarks">
+                                            <p><small><strong>Remarks:</strong> <t t-esc="qc.remarks"/></small></p>
+                                        </t>
+                                        <t t-if="qc.corrective_action">
+                                            <p><small><strong>Corrective Action:</strong> <t t-esc="qc.corrective_action"/></small></p>
+                                        </t>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+
+                        <!-- Notes -->
+                        <t t-if="doc.rejection_reason">
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="text-danger border-bottom pb-1">REJECTION / FAILURE REASON</h5>
+                                    <p><t t-esc="doc.rejection_reason"/></p>
+                                </div>
+                            </div>
+                        </t>
+
+                        <!-- Signature Block -->
+                        <div class="row mt-5">
+                            <div class="col-4 text-center">
+                                <div class="border-top pt-2">
+                                    <strong>Supervisor</strong>
+                                    <p class="mt-3 mb-0">
+                                        <t t-esc="doc.supervisor_id.name or '_______________________'"/>
+                                    </p>
+                                    <small>Name &amp; Signature</small>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="border-top pt-2">
+                                    <strong>QC Inspector</strong>
+                                    <p class="mt-3 mb-0">
+                                        <t t-if="doc.quality_check_ids">
+                                            <t t-esc="doc.quality_check_ids[0].inspector_id.name"/>
+                                        </t>
+                                        <t t-else="">_______________________</t>
+                                    </p>
+                                    <small>Name &amp; Signature</small>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="border-top pt-2">
+                                    <strong>Factory Manager</strong>
+                                    <p class="mt-3 mb-0">_______________________</p>
+                                    <small>Name &amp; Signature</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- end page -->
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

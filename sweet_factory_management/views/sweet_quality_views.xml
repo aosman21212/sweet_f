@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Quality Check Form View -->
+    <record id="view_sweet_quality_check_form" model="ir.ui.view">
+        <field name="name">sweet.quality.check.form</field>
+        <field name="model">sweet.quality.check</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_pass" string="Pass" type="object"
+                            class="btn-success"
+                            invisible="result not in ['pending', 'fail', 'conditional']"/>
+                    <button name="action_fail" string="Fail" type="object"
+                            class="btn-danger"
+                            invisible="result not in ['pending', 'pass', 'conditional']"/>
+                    <button name="action_conditional_pass" string="Conditional Pass" type="object"
+                            invisible="result not in ['pending', 'pass', 'fail']"/>
+                    <field name="result" widget="statusbar"
+                           statusbar_visible="pending,pass,fail,conditional"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="batch_id"/>
+                            <field name="recipe_id" readonly="1"/>
+                            <field name="sweet_type" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="check_stage"/>
+                            <field name="check_date"/>
+                            <field name="inspector_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Parameters" name="parameters">
+                            <field name="line_ids" widget="one2many">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="parameter_id"/>
+                                    <field name="category" optional="show"/>
+                                    <field name="parameter_type" optional="show"/>
+                                    <field name="uom"/>
+                                    <field name="min_value" optional="show"/>
+                                    <field name="max_value" optional="show"/>
+                                    <field name="measured_value"
+                                           invisible="parameter_type != 'numeric'"/>
+                                    <field name="boolean_value"
+                                           invisible="parameter_type != 'boolean'"/>
+                                    <field name="text_value"
+                                           invisible="parameter_type != 'text'"/>
+                                    <field name="result" widget="badge"
+                                           decoration-success="result == 'pass'"
+                                           decoration-danger="result == 'fail'"
+                                           decoration-muted="result == 'na'"/>
+                                    <field name="notes" optional="hide"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Sensory Evaluation" name="sensory">
+                            <group>
+                                <group string="Scores (1-10)">
+                                    <field name="taste_score"/>
+                                    <field name="color_score"/>
+                                    <field name="texture_score"/>
+                                    <field name="aroma_score"/>
+                                </group>
+                                <group string="Overall">
+                                    <field name="overall_score" readonly="1"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Defects" name="defects">
+                            <group>
+                                <field name="defect_type"/>
+                                <field name="defect_qty"
+                                       invisible="defect_type == 'none'"/>
+                            </group>
+                        </page>
+                        <page string="Remarks" name="remarks">
+                            <group>
+                                <field name="remarks" nolabel="1"/>
+                            </group>
+                            <group>
+                                <field name="corrective_action" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Quality Check List View -->
+    <record id="view_sweet_quality_check_list" model="ir.ui.view">
+        <field name="name">sweet.quality.check.list</field>
+        <field name="model">sweet.quality.check</field>
+        <field name="arch" type="xml">
+            <list decoration-success="result == 'pass'"
+                  decoration-danger="result == 'fail'"
+                  decoration-warning="result == 'conditional'">
+                <field name="name"/>
+                <field name="batch_id"/>
+                <field name="recipe_id"/>
+                <field name="sweet_type" optional="show"/>
+                <field name="check_stage"/>
+                <field name="check_date"/>
+                <field name="inspector_id"/>
+                <field name="overall_score" optional="show"/>
+                <field name="defect_type" optional="show"/>
+                <field name="result" widget="badge"
+                       decoration-success="result == 'pass'"
+                       decoration-danger="result == 'fail'"
+                       decoration-warning="result == 'conditional'"
+                       decoration-muted="result == 'pending'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Quality Check Search View -->
+    <record id="view_sweet_quality_check_search" model="ir.ui.view">
+        <field name="name">sweet.quality.check.search</field>
+        <field name="model">sweet.quality.check</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="batch_id"/>
+                <field name="recipe_id"/>
+                <field name="inspector_id"/>
+                <filter string="Pending" name="filter_pending" domain="[('result','=','pending')]"/>
+                <filter string="Passed" name="filter_pass" domain="[('result','=','pass')]"/>
+                <filter string="Failed" name="filter_fail" domain="[('result','=','fail')]"/>
+                <filter string="Conditional" name="filter_conditional" domain="[('result','=','conditional')]"/>
+                <group>
+                    <filter string="Batch" name="group_batch" context="{'group_by': 'batch_id'}"/>
+                    <filter string="Result" name="group_result" context="{'group_by': 'result'}"/>
+                    <filter string="Check Stage" name="group_stage" context="{'group_by': 'check_stage'}"/>
+                    <filter string="Inspector" name="group_inspector" context="{'group_by': 'inspector_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Quality Check Action -->
+    <record id="action_sweet_quality_check" model="ir.actions.act_window">
+        <field name="name">Quality Checks</field>
+        <field name="res_model">sweet.quality.check</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No quality checks yet.
+            </p>
+            <p>Create quality checks from a production batch to inspect parameters and record results.</p>
+        </field>
+    </record>
+
+</odoo>

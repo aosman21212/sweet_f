@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ===== QUALITY PARAMETERS ===== -->
+    <record id="demo_qp_moisture" model="sweet.quality.parameter">
+        <field name="name">Moisture Content</field>
+        <field name="code">QP-001</field>
+        <field name="sequence">10</field>
+        <field name="category">physical</field>
+        <field name="parameter_type">numeric</field>
+        <field name="uom">%</field>
+        <field name="min_value">0.0</field>
+        <field name="max_value">3.0</field>
+        <field name="target_value">1.5</field>
+        <field name="description">Measure moisture content using moisture analyzer at 105°C for 30 minutes.</field>
+    </record>
+
+    <record id="demo_qp_brix" model="sweet.quality.parameter">
+        <field name="name">Brix / Sugar Concentration</field>
+        <field name="code">QP-002</field>
+        <field name="sequence">20</field>
+        <field name="category">chemical</field>
+        <field name="parameter_type">numeric</field>
+        <field name="uom">Brix</field>
+        <field name="min_value">68.0</field>
+        <field name="max_value">72.0</field>
+        <field name="target_value">70.0</field>
+        <field name="description">Measure using refractometer on dissolved sample at 20°C.</field>
+    </record>
+
+    <record id="demo_qp_ph" model="sweet.quality.parameter">
+        <field name="name">pH Level</field>
+        <field name="code">QP-003</field>
+        <field name="sequence">30</field>
+        <field name="category">chemical</field>
+        <field name="parameter_type">numeric</field>
+        <field name="uom">pH</field>
+        <field name="min_value">3.0</field>
+        <field name="max_value">5.0</field>
+        <field name="target_value">4.0</field>
+        <field name="description">Measure using calibrated pH meter on 10% solution at 25°C.</field>
+    </record>
+
+    <record id="demo_qp_weight" model="sweet.quality.parameter">
+        <field name="name">Weight per Piece</field>
+        <field name="code">QP-004</field>
+        <field name="sequence">40</field>
+        <field name="category">weight</field>
+        <field name="parameter_type">numeric</field>
+        <field name="uom">g</field>
+        <field name="min_value">8.0</field>
+        <field name="max_value">12.0</field>
+        <field name="target_value">10.0</field>
+        <field name="description">Weigh 10 random pieces on calibrated scale and record average.</field>
+    </record>
+
+    <record id="demo_qp_color" model="sweet.quality.parameter">
+        <field name="name">Color Appearance</field>
+        <field name="code">QP-005</field>
+        <field name="sequence">50</field>
+        <field name="category">sensory</field>
+        <field name="parameter_type">boolean</field>
+        <field name="description">Visual inspection: check uniformity, intensity and absence of discoloration.</field>
+    </record>
+
+    <record id="demo_qp_texture" model="sweet.quality.parameter">
+        <field name="name">Hardness / Texture</field>
+        <field name="code">QP-006</field>
+        <field name="sequence">60</field>
+        <field name="category">sensory</field>
+        <field name="parameter_type">boolean</field>
+        <field name="description">Manual texture evaluation: firmness, chewiness, absence of stickiness.</field>
+    </record>
+
+    <record id="demo_qp_micro" model="sweet.quality.parameter">
+        <field name="name">Microbiological Safety</field>
+        <field name="code">QP-007</field>
+        <field name="sequence">70</field>
+        <field name="category">microbiological</field>
+        <field name="parameter_type">boolean</field>
+        <field name="description">TPC, Yeast &amp; Mould, Coliforms within food safety limits per GCC standards.</field>
+    </record>
+
+    <record id="demo_qp_packaging" model="sweet.quality.parameter">
+        <field name="name">Packaging Integrity</field>
+        <field name="code">QP-008</field>
+        <field name="sequence">80</field>
+        <field name="category">packaging</field>
+        <field name="parameter_type">boolean</field>
+        <field name="description">Check seal integrity, label accuracy, barcode readability, and no damage.</field>
+    </record>
+
+    <!-- ===== MACHINES ===== -->
+    <record id="demo_machine_cooker1" model="sweet.machine">
+        <field name="name">Sugar Cooker #1</field>
+        <field name="code">MC-001</field>
+        <field name="machine_type">cooker</field>
+        <field name="state">available</field>
+        <field name="manufacturer">Hards Candy Machinery Co.</field>
+        <field name="model_number">HC-500</field>
+        <field name="serial_number">HC500-2022-001</field>
+        <field name="capacity_per_hour">200.0</field>
+        <field name="location">Zone A - Cooking Area</field>
+        <field name="maintenance_interval_days">30</field>
+    </record>
+
+    <record id="demo_machine_wrapper1" model="sweet.machine">
+        <field name="name">Candy Wrapper Line #1</field>
+        <field name="code">MC-002</field>
+        <field name="machine_type">wrapper</field>
+        <field name="state">running</field>
+        <field name="manufacturer">PackSweet Industries</field>
+        <field name="model_number">PW-2000</field>
+        <field name="serial_number">PW2000-2021-005</field>
+        <field name="capacity_per_hour">500.0</field>
+        <field name="location">Zone B - Wrapping Area</field>
+        <field name="maintenance_interval_days">14</field>
+    </record>
+
+    <record id="demo_machine_cooling1" model="sweet.machine">
+        <field name="name">Cooling Tunnel #1</field>
+        <field name="code">MC-003</field>
+        <field name="machine_type">cooling</field>
+        <field name="state">available</field>
+        <field name="manufacturer">CoolTech Systems</field>
+        <field name="model_number">CT-1500</field>
+        <field name="serial_number">CT1500-2023-002</field>
+        <field name="capacity_per_hour">300.0</field>
+        <field name="location">Zone A - Cooling Area</field>
+        <field name="maintenance_interval_days">30</field>
+    </record>
+
+    <record id="demo_machine_packaging1" model="sweet.machine">
+        <field name="name">Packaging Machine #1</field>
+        <field name="code">MC-004</field>
+        <field name="machine_type">packaging</field>
+        <field name="state">maintenance</field>
+        <field name="manufacturer">AutoPack Ltd.</field>
+        <field name="model_number">AP-800</field>
+        <field name="serial_number">AP800-2020-003</field>
+        <field name="capacity_per_hour">400.0</field>
+        <field name="location">Zone C - Packaging Area</field>
+        <field name="maintenance_interval_days">21</field>
+    </record>
+
+    <!-- ===== INGREDIENT PRODUCTS ===== -->
+    <record id="demo_product_sugar" model="product.product">
+        <field name="name">Sugar (Raw)</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">0.8</field>
+    </record>
+
+    <record id="demo_product_glucose" model="product.product">
+        <field name="name">Glucose Syrup</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">1.2</field>
+    </record>
+
+    <record id="demo_product_citric_acid" model="product.product">
+        <field name="name">Citric Acid</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">3.5</field>
+    </record>
+
+    <record id="demo_product_strawberry_flavor" model="product.product">
+        <field name="name">Strawberry Flavor</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">15.0</field>
+    </record>
+
+    <record id="demo_product_red_color" model="product.product">
+        <field name="name">Red Food Color</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">25.0</field>
+    </record>
+
+    <record id="demo_product_gelatin" model="product.product">
+        <field name="name">Gelatin</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">8.0</field>
+    </record>
+
+    <record id="demo_product_butter" model="product.product">
+        <field name="name">Butter</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">6.0</field>
+    </record>
+
+    <record id="demo_product_cream" model="product.product">
+        <field name="name">Cream</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">4.5</field>
+    </record>
+
+    <record id="demo_product_cocoa" model="product.product">
+        <field name="name">Cocoa Powder</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">12.0</field>
+    </record>
+
+    <record id="demo_product_vanilla" model="product.product">
+        <field name="name">Vanilla Essence</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">20.0</field>
+    </record>
+
+    <!-- ===== FINISHED PRODUCTS ===== -->
+    <record id="demo_product_strawberry_candy" model="product.product">
+        <field name="name">Strawberry Hard Candy</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">5.0</field>
+    </record>
+
+    <record id="demo_product_choc_toffee" model="product.product">
+        <field name="name">Chocolate Toffee</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">7.0</field>
+    </record>
+
+    <record id="demo_product_gummy_bears" model="product.product">
+        <field name="name">Mixed Gummy Bears</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="standard_price">6.0</field>
+    </record>
+
+    <!-- ===== RECIPES ===== -->
+    <record id="demo_recipe_strawberry_candy" model="sweet.recipe">
+        <field name="name">Classic Strawberry Hard Candy</field>
+        <field name="code">REC-001</field>
+        <field name="sweet_type">hard_candy</field>
+        <field name="state">approved</field>
+        <field name="standard_batch_qty">100.0</field>
+        <field name="product_id" ref="demo_product_strawberry_candy"/>
+        <field name="yield_percentage">92.0</field>
+        <field name="cooking_temp">150.0</field>
+        <field name="cooking_duration">45</field>
+        <field name="cooling_temp">25.0</field>
+        <field name="shelf_life_days">365</field>
+        <field name="storage_temp">Below 25°C, away from humidity</field>
+        <field name="calories_per_100g">390.0</field>
+        <field name="sugar_content">85.0</field>
+        <field name="fat_content">0.5</field>
+        <field name="contains_nuts">False</field>
+        <field name="contains_dairy">False</field>
+        <field name="contains_gluten">False</field>
+        <field name="quality_parameter_ids" eval="[(4, ref('demo_qp_moisture')), (4, ref('demo_qp_brix')), (4, ref('demo_qp_ph')), (4, ref('demo_qp_weight')), (4, ref('demo_qp_color')), (4, ref('demo_qp_packaging'))]"/>
+    </record>
+
+    <record id="demo_recipe_ingredient_sugar_candy1" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="product_id" ref="demo_product_sugar"/>
+        <field name="quantity_per_batch">60.0</field>
+        <field name="ingredient_type">sugar</field>
+        <field name="is_key_ingredient">True</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_glucose_candy1" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="product_id" ref="demo_product_glucose"/>
+        <field name="quantity_per_batch">30.0</field>
+        <field name="ingredient_type">glucose</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_acid_candy1" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="product_id" ref="demo_product_citric_acid"/>
+        <field name="quantity_per_batch">1.0</field>
+        <field name="ingredient_type">acid</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_flavor_candy1" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="product_id" ref="demo_product_strawberry_flavor"/>
+        <field name="quantity_per_batch">0.5</field>
+        <field name="ingredient_type">flavor</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_color_candy1" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="product_id" ref="demo_product_red_color"/>
+        <field name="quantity_per_batch">0.1</field>
+        <field name="ingredient_type">color</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- Recipe 2: Creamy Toffee -->
+    <record id="demo_recipe_toffee" model="sweet.recipe">
+        <field name="name">Creamy Toffee</field>
+        <field name="code">REC-002</field>
+        <field name="sweet_type">soft_candy</field>
+        <field name="state">approved</field>
+        <field name="standard_batch_qty">80.0</field>
+        <field name="product_id" ref="demo_product_choc_toffee"/>
+        <field name="yield_percentage">95.0</field>
+        <field name="cooking_temp">120.0</field>
+        <field name="cooking_duration">30</field>
+        <field name="cooling_temp">20.0</field>
+        <field name="shelf_life_days">180</field>
+        <field name="storage_temp">Below 20°C</field>
+        <field name="calories_per_100g">420.0</field>
+        <field name="sugar_content">60.0</field>
+        <field name="fat_content">22.0</field>
+        <field name="contains_dairy">True</field>
+        <field name="quality_parameter_ids" eval="[(4, ref('demo_qp_moisture')), (4, ref('demo_qp_weight')), (4, ref('demo_qp_texture')), (4, ref('demo_qp_packaging'))]"/>
+    </record>
+
+    <record id="demo_recipe_ingredient_sugar_toffee" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_toffee"/>
+        <field name="product_id" ref="demo_product_sugar"/>
+        <field name="quantity_per_batch">40.0</field>
+        <field name="ingredient_type">sugar</field>
+        <field name="is_key_ingredient">True</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_glucose_toffee" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_toffee"/>
+        <field name="product_id" ref="demo_product_glucose"/>
+        <field name="quantity_per_batch">20.0</field>
+        <field name="ingredient_type">glucose</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_butter_toffee" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_toffee"/>
+        <field name="product_id" ref="demo_product_butter"/>
+        <field name="quantity_per_batch">10.0</field>
+        <field name="ingredient_type">fat</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_cream_toffee" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_toffee"/>
+        <field name="product_id" ref="demo_product_cream"/>
+        <field name="quantity_per_batch">8.0</field>
+        <field name="ingredient_type">dairy</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_vanilla_toffee" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_toffee"/>
+        <field name="product_id" ref="demo_product_vanilla"/>
+        <field name="quantity_per_batch">0.5</field>
+        <field name="ingredient_type">flavor</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- Recipe 3: Mixed Gummy Bears -->
+    <record id="demo_recipe_gummy" model="sweet.recipe">
+        <field name="name">Mixed Gummy Bears</field>
+        <field name="code">REC-003</field>
+        <field name="sweet_type">gummy</field>
+        <field name="state">approved</field>
+        <field name="standard_batch_qty">120.0</field>
+        <field name="product_id" ref="demo_product_gummy_bears"/>
+        <field name="yield_percentage">90.0</field>
+        <field name="cooking_temp">90.0</field>
+        <field name="cooking_duration">20</field>
+        <field name="cooling_temp">18.0</field>
+        <field name="shelf_life_days">270</field>
+        <field name="storage_temp">15-20°C, dry place</field>
+        <field name="calories_per_100g">340.0</field>
+        <field name="sugar_content">75.0</field>
+        <field name="fat_content">0.2</field>
+        <field name="quality_parameter_ids" eval="[(4, ref('demo_qp_moisture')), (4, ref('demo_qp_brix')), (4, ref('demo_qp_weight')), (4, ref('demo_qp_texture')), (4, ref('demo_qp_micro')), (4, ref('demo_qp_packaging'))]"/>
+    </record>
+
+    <record id="demo_recipe_ingredient_sugar_gummy" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_gummy"/>
+        <field name="product_id" ref="demo_product_sugar"/>
+        <field name="quantity_per_batch">50.0</field>
+        <field name="ingredient_type">sugar</field>
+        <field name="is_key_ingredient">True</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_glucose_gummy" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_gummy"/>
+        <field name="product_id" ref="demo_product_glucose"/>
+        <field name="quantity_per_batch">40.0</field>
+        <field name="ingredient_type">glucose</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_gelatin_gummy" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_gummy"/>
+        <field name="product_id" ref="demo_product_gelatin"/>
+        <field name="quantity_per_batch">8.0</field>
+        <field name="ingredient_type">gelling</field>
+        <field name="is_key_ingredient">True</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_acid_gummy" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_gummy"/>
+        <field name="product_id" ref="demo_product_citric_acid"/>
+        <field name="quantity_per_batch">2.0</field>
+        <field name="ingredient_type">acid</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="demo_recipe_ingredient_flavor_gummy" model="sweet.recipe.ingredient">
+        <field name="recipe_id" ref="demo_recipe_gummy"/>
+        <field name="product_id" ref="demo_product_strawberry_flavor"/>
+        <field name="quantity_per_batch">1.0</field>
+        <field name="ingredient_type">flavor</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- ===== PRODUCTION BATCHES ===== -->
+    <!-- Batch 1: Strawberry Hard Candy - DONE -->
+    <record id="demo_batch_001" model="sweet.batch">
+        <field name="name">BATCH/2026/00001</field>
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="date_planned" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d 06:00:00')"/>
+        <field name="date_start" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d 06:15:00')"/>
+        <field name="date_end" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d 14:30:00')"/>
+        <field name="planned_qty">100.0</field>
+        <field name="actual_yield">94.0</field>
+        <field name="production_date" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d')"/>
+        <field name="shift">morning</field>
+        <field name="machine_id" ref="demo_machine_cooker1"/>
+        <field name="state">done</field>
+        <field name="actual_cooking_temp">151.0</field>
+        <field name="actual_cooling_temp">24.0</field>
+        <field name="actual_duration">48</field>
+    </record>
+
+    <record id="demo_batch_001_ing1" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="product_id" ref="demo_product_sugar"/>
+        <field name="ingredient_type">sugar</field>
+        <field name="planned_qty">60.0</field>
+        <field name="actual_qty">60.5</field>
+        <field name="cost_per_unit">0.8</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_batch_001_ing2" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="product_id" ref="demo_product_glucose"/>
+        <field name="ingredient_type">glucose</field>
+        <field name="planned_qty">30.0</field>
+        <field name="actual_qty">30.0</field>
+        <field name="cost_per_unit">1.2</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_batch_001_ing3" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="product_id" ref="demo_product_citric_acid"/>
+        <field name="ingredient_type">acid</field>
+        <field name="planned_qty">1.0</field>
+        <field name="actual_qty">1.0</field>
+        <field name="cost_per_unit">3.5</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_batch_001_ing4" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="product_id" ref="demo_product_strawberry_flavor"/>
+        <field name="ingredient_type">flavor</field>
+        <field name="planned_qty">0.5</field>
+        <field name="actual_qty">0.5</field>
+        <field name="cost_per_unit">15.0</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="demo_batch_001_ing5" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="product_id" ref="demo_product_red_color"/>
+        <field name="ingredient_type">color</field>
+        <field name="planned_qty">0.1</field>
+        <field name="actual_qty">0.1</field>
+        <field name="cost_per_unit">25.0</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="demo_batch_001_out1" model="sweet.batch.output.line">
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="product_id" ref="demo_product_strawberry_candy"/>
+        <field name="planned_qty">92.0</field>
+        <field name="actual_qty">94.0</field>
+        <field name="packaging_type">wrapper</field>
+        <field name="pieces_per_kg">100.0</field>
+        <field name="grade">a</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <!-- Batch 2: Creamy Toffee - IN PROGRESS -->
+    <record id="demo_batch_002" model="sweet.batch">
+        <field name="name">BATCH/2026/00002</field>
+        <field name="recipe_id" ref="demo_recipe_toffee"/>
+        <field name="date_planned" eval="DateTime.now().strftime('%Y-%m-%d 14:00:00')"/>
+        <field name="date_start" eval="DateTime.now().strftime('%Y-%m-%d 14:05:00')"/>
+        <field name="planned_qty">80.0</field>
+        <field name="production_date" eval="DateTime.now().strftime('%Y-%m-%d')"/>
+        <field name="shift">afternoon</field>
+        <field name="machine_id" ref="demo_machine_cooker1"/>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="demo_batch_002_ing1" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_002"/>
+        <field name="product_id" ref="demo_product_sugar"/>
+        <field name="ingredient_type">sugar</field>
+        <field name="planned_qty">40.0</field>
+        <field name="actual_qty">40.0</field>
+        <field name="cost_per_unit">0.8</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_batch_002_ing2" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_002"/>
+        <field name="product_id" ref="demo_product_glucose"/>
+        <field name="ingredient_type">glucose</field>
+        <field name="planned_qty">20.0</field>
+        <field name="actual_qty">20.0</field>
+        <field name="cost_per_unit">1.2</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_batch_002_ing3" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_002"/>
+        <field name="product_id" ref="demo_product_butter"/>
+        <field name="ingredient_type">fat</field>
+        <field name="planned_qty">10.0</field>
+        <field name="actual_qty">10.0</field>
+        <field name="cost_per_unit">6.0</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_batch_002_out1" model="sweet.batch.output.line">
+        <field name="batch_id" ref="demo_batch_002"/>
+        <field name="product_id" ref="demo_product_choc_toffee"/>
+        <field name="planned_qty">76.0</field>
+        <field name="actual_qty">0.0</field>
+        <field name="packaging_type">box</field>
+        <field name="grade">a</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <!-- Batch 3: Mixed Gummy Bears - QUALITY CHECK -->
+    <record id="demo_batch_003" model="sweet.batch">
+        <field name="name">BATCH/2026/00003</field>
+        <field name="recipe_id" ref="demo_recipe_gummy"/>
+        <field name="date_planned" eval="(DateTime.now() - timedelta(days=1)).strftime('%Y-%m-%d 22:00:00')"/>
+        <field name="date_start" eval="(DateTime.now() - timedelta(days=1)).strftime('%Y-%m-%d 22:10:00')"/>
+        <field name="planned_qty">120.0</field>
+        <field name="production_date" eval="(DateTime.now() - timedelta(days=1)).strftime('%Y-%m-%d')"/>
+        <field name="shift">night</field>
+        <field name="machine_id" ref="demo_machine_cooker1"/>
+        <field name="state">quality_check</field>
+        <field name="actual_cooking_temp">90.5</field>
+        <field name="actual_duration">22</field>
+    </record>
+
+    <record id="demo_batch_003_ing1" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_003"/>
+        <field name="product_id" ref="demo_product_sugar"/>
+        <field name="ingredient_type">sugar</field>
+        <field name="planned_qty">50.0</field>
+        <field name="actual_qty">50.0</field>
+        <field name="cost_per_unit">0.8</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_batch_003_ing2" model="sweet.batch.ingredient.line">
+        <field name="batch_id" ref="demo_batch_003"/>
+        <field name="product_id" ref="demo_product_gelatin"/>
+        <field name="ingredient_type">gelling</field>
+        <field name="planned_qty">8.0</field>
+        <field name="actual_qty">8.0</field>
+        <field name="cost_per_unit">8.0</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_batch_003_out1" model="sweet.batch.output.line">
+        <field name="batch_id" ref="demo_batch_003"/>
+        <field name="product_id" ref="demo_product_gummy_bears"/>
+        <field name="planned_qty">108.0</field>
+        <field name="actual_qty">110.0</field>
+        <field name="packaging_type">bag</field>
+        <field name="pieces_per_kg">200.0</field>
+        <field name="grade">a</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <!-- Batch 4: Strawberry Hard Candy - DRAFT (scheduled tomorrow) -->
+    <record id="demo_batch_004" model="sweet.batch">
+        <field name="name">BATCH/2026/00004</field>
+        <field name="recipe_id" ref="demo_recipe_strawberry_candy"/>
+        <field name="date_planned" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 06:00:00')"/>
+        <field name="planned_qty">150.0</field>
+        <field name="shift">morning</field>
+        <field name="machine_id" ref="demo_machine_cooker1"/>
+        <field name="state">draft</field>
+    </record>
+
+    <!-- ===== QUALITY CHECKS ===== -->
+    <!-- QC for Batch 1 - PASSED -->
+    <record id="demo_qc_001" model="sweet.quality.check">
+        <field name="name">QC/2026/00001</field>
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="check_date" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d 15:00:00')"/>
+        <field name="inspector_id" ref="base.user_admin"/>
+        <field name="check_stage">final</field>
+        <field name="result">pass</field>
+        <field name="taste_score">9</field>
+        <field name="color_score">8</field>
+        <field name="texture_score">9</field>
+        <field name="aroma_score">8</field>
+        <field name="defect_type">none</field>
+        <field name="remarks">Batch meets all quality standards. Excellent color and texture.</field>
+    </record>
+
+    <record id="demo_qc_001_line1" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_001"/>
+        <field name="parameter_id" ref="demo_qp_moisture"/>
+        <field name="uom">%</field>
+        <field name="min_value">0.0</field>
+        <field name="max_value">3.0</field>
+        <field name="measured_value">1.2</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_qc_001_line2" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_001"/>
+        <field name="parameter_id" ref="demo_qp_brix"/>
+        <field name="uom">Brix</field>
+        <field name="min_value">68.0</field>
+        <field name="max_value">72.0</field>
+        <field name="measured_value">70.5</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_qc_001_line3" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_001"/>
+        <field name="parameter_id" ref="demo_qp_ph"/>
+        <field name="uom">pH</field>
+        <field name="min_value">3.0</field>
+        <field name="max_value">5.0</field>
+        <field name="measured_value">3.8</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_qc_001_line4" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_001"/>
+        <field name="parameter_id" ref="demo_qp_weight"/>
+        <field name="uom">g</field>
+        <field name="min_value">8.0</field>
+        <field name="max_value">12.0</field>
+        <field name="measured_value">9.8</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="demo_qc_001_line5" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_001"/>
+        <field name="parameter_id" ref="demo_qp_color"/>
+        <field name="boolean_value">True</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="demo_qc_001_line6" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_001"/>
+        <field name="parameter_id" ref="demo_qp_packaging"/>
+        <field name="boolean_value">True</field>
+        <field name="sequence">60</field>
+    </record>
+
+    <!-- QC for Batch 3 - PENDING -->
+    <record id="demo_qc_002" model="sweet.quality.check">
+        <field name="name">QC/2026/00002</field>
+        <field name="batch_id" ref="demo_batch_003"/>
+        <field name="check_date" eval="DateTime.now().strftime('%Y-%m-%d 08:00:00')"/>
+        <field name="inspector_id" ref="base.user_admin"/>
+        <field name="check_stage">final</field>
+        <field name="result">pending</field>
+        <field name="taste_score">8</field>
+        <field name="color_score">7</field>
+        <field name="texture_score">8</field>
+        <field name="aroma_score">7</field>
+        <field name="defect_type">none</field>
+        <field name="remarks">Awaiting lab results for microbiological safety.</field>
+    </record>
+
+    <record id="demo_qc_002_line1" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_002"/>
+        <field name="parameter_id" ref="demo_qp_moisture"/>
+        <field name="uom">%</field>
+        <field name="min_value">0.0</field>
+        <field name="max_value">3.0</field>
+        <field name="measured_value">1.8</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="demo_qc_002_line2" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_002"/>
+        <field name="parameter_id" ref="demo_qp_brix"/>
+        <field name="uom">Brix</field>
+        <field name="min_value">68.0</field>
+        <field name="max_value">72.0</field>
+        <field name="measured_value">69.5</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="demo_qc_002_line3" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_002"/>
+        <field name="parameter_id" ref="demo_qp_weight"/>
+        <field name="uom">g</field>
+        <field name="min_value">8.0</field>
+        <field name="max_value">12.0</field>
+        <field name="measured_value">10.2</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="demo_qc_002_line4" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_002"/>
+        <field name="parameter_id" ref="demo_qp_texture"/>
+        <field name="boolean_value">True</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="demo_qc_002_line5" model="sweet.quality.check.line">
+        <field name="check_id" ref="demo_qc_002"/>
+        <field name="parameter_id" ref="demo_qp_micro"/>
+        <field name="boolean_value">False</field>
+        <field name="notes">Awaiting lab results</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- ===== MACHINE LOGS ===== -->
+    <record id="demo_machine_log_001" model="sweet.machine.log">
+        <field name="machine_id" ref="demo_machine_cooker1"/>
+        <field name="batch_id" ref="demo_batch_001"/>
+        <field name="log_type">production</field>
+        <field name="log_date" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d 06:15:00')"/>
+        <field name="end_date" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d 14:30:00')"/>
+        <field name="performed_by" ref="base.user_admin"/>
+        <field name="description">Production run for Strawberry Hard Candy batch BATCH/2026/00001</field>
+        <field name="qty_produced">94.0</field>
+    </record>
+
+    <record id="demo_machine_log_002" model="sweet.machine.log">
+        <field name="machine_id" ref="demo_machine_packaging1"/>
+        <field name="log_type">maintenance</field>
+        <field name="log_date" eval="DateTime.now().strftime('%Y-%m-%d 09:00:00')"/>
+        <field name="performed_by" ref="base.user_admin"/>
+        <field name="description">Scheduled preventive maintenance - belt replacement and lubrication</field>
+        <field name="issue_found">Worn conveyor belt detected during inspection</field>
+        <field name="action_taken">Belt replaced, all moving parts lubricated, calibration performed</field>
+    </record>
+
+    <record id="demo_machine_log_003" model="sweet.machine.log">
+        <field name="machine_id" ref="demo_machine_cooling1"/>
+        <field name="log_type">inspection</field>
+        <field name="log_date" eval="(DateTime.now() - timedelta(days=7)).strftime('%Y-%m-%d 10:00:00')"/>
+        <field name="end_date" eval="(DateTime.now() - timedelta(days=7)).strftime('%Y-%m-%d 11:00:00')"/>
+        <field name="performed_by" ref="base.user_admin"/>
+        <field name="description">Weekly cooling system inspection - temperature calibration check</field>
+    </record>
+
+</odoo>
