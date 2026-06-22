@@ -30,6 +30,11 @@
         ],
     },
     'demo': ['demo/sweet_demo.xml'],
+    'images': [
+        'static/description/banner.png',
+        'static/description/icon.png',
+        'static/description/screenshot.jpg',
+    ],
     'i18n': ['i18n/ar.po', 'i18n/en.po'],
     'application': True,
     'installable': True,
